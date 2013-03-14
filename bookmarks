@@ -1,0 +1,31 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("defcustom"
+ (position . 524)
+ (help-fn . describe-function)
+ (help-args defcustom)
+ (position . 524)
+ (handler . help-bookmark-jump))
+("indent.el.gz"
+ (filename . "/Applications/MacPorts/EmacsMac.app/Contents/Resources/lisp/indent.el.gz")
+ (front-context-string . "	(insert-char ?\\")
+ (rear-context-string . "ndent-tabs-mode\n")
+ (position . 5943))
+("js-test"
+ (filename . "~/learning/javascript/t.js")
+ (front-context-string)
+ (rear-context-string)
+ (position . 1))
+("simple.el.gz"
+ (filename . "/Applications/MacPorts/EmacsMac.app/Contents/Resources/lisp/simple.el.gz")
+ (front-context-string . ";;; simple.el --")
+ (rear-context-string)
+ (position . 1))
+("init.el"
+ (filename . "~/.emacs.d/init.el")
+ (front-context-string . "q user-mail-addr")
+ (rear-context-string)
+ (position . 14))
+)

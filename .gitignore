@@ -3,3 +3,5 @@ url/
 init.el.*
 ac-comphist.dat
 plugins/yasnippet/extras/
+semanticdb/
+.session

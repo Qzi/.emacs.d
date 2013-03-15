@@ -14,19 +14,20 @@
 ;;(global-set-key [(meta \3)] 'move-end-of-line)
 
 ;; defun in init-utils
-(global-set-key (kbd "C-c l") 'copy-lines)
+(global-set-key (kbd "C-c . l") 'copy-lines)
 
 ;; ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
+
 
 ;; ecb
 ;; ====
 ;; deps: ecb+cedet
 ;;;; 各窗口间切换
-(global-set-key [M-left] 'windmove-left)
-(global-set-key [M-right] 'windmove-right)
-(global-set-key [M-up] 'windmove-up)
-(global-set-key [M-down] 'windmove-down)
+(global-set-key (kbd "C-c h") 'windmove-left)	
+(global-set-key (kbd "C-c l") 'windmove-right)
+(global-set-key (kbd "C-c k") 'windmove-up)
+(global-set-key (kbd "C-c j") 'windmove-down)
  
 ;;;; 隐藏和显示ecb窗口
 (define-key global-map [(f1)] 'ecb-hide-ecb-windows)
@@ -39,8 +40,6 @@
 (define-key global-map "\C-c\ 4" 'ecb-maximize-window-history)
 ;;;; 恢复原始窗口布局
 (define-key global-map "\C-c`" 'ecb-restore-default-window-sizes)
-
-
 
 
 (provide 'init-keymap)

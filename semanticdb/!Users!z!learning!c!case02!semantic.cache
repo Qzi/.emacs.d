@@ -1,0 +1,45 @@
+;; Object case02/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "case02/"
+  :tables (list 
+   (semanticdb-table "main.cpp"
+    :major-mode 'c++-mode
+    :tags nil
+    :file "main.cpp"
+    :pointmax 192
+    :fsize 191
+    :lastmodtime '(20795 43257 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "hello.cpp"
+    :major-mode 'c++-mode
+    :tags nil
+    :file "hello.cpp"
+    :pointmax 100
+    :fsize 99
+    :lastmodtime '(20795 43286 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "factorial.cpp"
+    :major-mode 'c++-mode
+    :tags nil
+    :file "factorial.cpp"
+    :pointmax 117
+    :fsize 116
+    :lastmodtime '(20795 9085 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "functions.h"
+    :major-mode 'c-mode
+    :tags nil
+    :file "functions.h"
+    :pointmax 43
+    :fsize 42
+    :lastmodtime '(20795 9090 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!z!learning!c!case02!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

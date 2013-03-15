@@ -1,0 +1,561 @@
+;; Object sys/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sys/"
+  :tables (list 
+   (semanticdb-table "cdefs.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_CDEFS_H_" variable (:constant-flag t) nil [3392 3401])
+            ("__BEGIN_DECLS" variable (:constant-flag t) nil [3436 3449])
+            ("__END_DECLS" variable (:constant-flag t) nil [3471 3482])
+            ("__P" variable (:constant-flag t) nil [4166 4169])
+            ("__CONCAT" variable (:constant-flag t) nil [4218 4226])
+            ("__STRING" variable (:constant-flag t) nil [4247 4255])
+            ("__const" variable (:constant-flag t) nil [4271 4278])
+            ("__signed" variable (:constant-flag t) nil [4335 4343])
+            ("__volatile" variable (:constant-flag t) nil [4359 4369])
+            ("__inline" variable (:constant-flag t) nil [4412 4420])
+            ("__dead2" variable (:constant-flag t) nil [5569 5576])
+            ("__pure2" variable (:constant-flag t) nil [5612 5619])
+            ("__unused" variable (:constant-flag t) nil [5785 5793])
+            ("__used" variable (:constant-flag t) nil [5980 5986])
+            ("__deprecated" variable (:constant-flag t) nil [6216 6228])
+            ("__unavailable" variable (:constant-flag t) nil [6385 6398])
+            ("__dead" variable (:constant-flag t) nil [6524 6530])
+            ("__pure" variable (:constant-flag t) nil [6539 6545])
+            ("__restrict" variable (:constant-flag t) nil [6741 6751])
+            ("__printflike" variable (:constant-flag t) nil [7176 7188])
+            ("__scanflike" variable (:constant-flag t) nil [7284 7295])
+            ("__IDSTRING" variable (:constant-flag t) nil [7391 7401])
+            ("__COPYRIGHT" variable (:constant-flag t) nil [7485 7496])
+            ("__RCSID" variable (:constant-flag t) nil [7556 7563])
+            ("__SCCSID" variable (:constant-flag t) nil [7620 7628])
+            ("__PROJECT_VERSION" variable (:constant-flag t) nil [7695 7712])
+            ("__FBSDID" variable (:constant-flag t) nil [7849 7857])
+            ("__DARWIN_ONLY_64_BIT_INO_T" variable (:constant-flag t) nil [9494 9520])
+            ("__DARWIN_ONLY_VERS_1050" variable (:constant-flag t) nil [9606 9629])
+            ("__DARWIN_ONLY_UNIX_CONFORMANCE" variable (:constant-flag t) nil [10722 10752])
+            ("__DARWIN_UNIX03" variable (:constant-flag t) nil [11123 11138])
+            ("__DARWIN_UNIX03" variable (:constant-flag t) nil [11914 11929])
+            ("__DARWIN_64_BIT_INO_T" variable (:constant-flag t) nil [12966 12987])
+            ("__DARWIN_VERS_1050" variable (:constant-flag t) nil [13394 13412])
+            ("__DARWIN_NON_CANCELABLE" variable (:constant-flag t) nil [13508 13531])
+            ("__DARWIN_SUF_UNIX03" variable (:constant-flag t) nil [13695 13714])
+            ("__DARWIN_SUF_64_BIT_INO_T" variable (:constant-flag t) nil [14043 14068])
+            ("__DARWIN_SUF_1050" variable (:constant-flag t) nil [14410 14427])
+            ("__DARWIN_SUF_NON_CANCELABLE" variable (:constant-flag t) nil [14725 14752])
+            ("__DARWIN_SUF_EXTSN" variable (:constant-flag t) nil [15064 15082])
+            ("__DARWIN_ALIAS" variable (:constant-flag t) nil [15144 15158])
+            ("__DARWIN_ALIAS_C" variable (:constant-flag t) nil [15218 15234])
+            ("__DARWIN_ALIAS_I" variable (:constant-flag t) nil [15322 15338])
+            ("__DARWIN_INODE64" variable (:constant-flag t) nil [15424 15440])
+            ("__DARWIN_1050" variable (:constant-flag t) nil [15507 15520])
+            ("__DARWIN_1050ALIAS" variable (:constant-flag t) nil [15578 15596])
+            ("__DARWIN_1050ALIAS_C" variable (:constant-flag t) nil [15674 15694])
+            ("__DARWIN_1050ALIAS_I" variable (:constant-flag t) nil [15799 15819])
+            ("__DARWIN_1050INODE64" variable (:constant-flag t) nil [15922 15942])
+            ("__DARWIN_EXTSN" variable (:constant-flag t) nil [16026 16040])
+            ("__DARWIN_EXTSN_C" variable (:constant-flag t) nil [16099 16115])
+            ("sys/_symbol_aliasing.h" include (:system-flag t) nil [16227 16260])
+            ("__DARWIN_ALIAS_STARTING" variable (:constant-flag t) nil [16487 16510])
+            ("sys/_posix_availability.h" include (:system-flag t) nil [18681 18717])
+            ("__POSIX_C_DEPRECATED" variable (:constant-flag t) nil [18727 18747])
+            ("__DARWIN_C_ANSI" variable (:constant-flag t) nil [19110 19125])
+            ("__DARWIN_C_FULL" variable (:constant-flag t) nil [19150 19165])
+            ("__DARWIN_C_LEVEL" variable (:constant-flag t) nil [19410 19426])
+            ("__DARWIN_NO_LONG_LONG" variable (:constant-flag t) nil [19630 19651])
+            ("_DARWIN_FEATURE_64_BIT_INODE" variable (:constant-flag t) nil [20070 20098])
+            ("_DARWIN_FEATURE_ONLY_UNIX_CONFORMANCE" variable (:constant-flag t) nil [20870 20907])
+            ("_DARWIN_FEATURE_UNIX_CONFORMANCE" variable (:constant-flag t) nil [21083 21115])
+            ("__CAST_AWAY_QUALIFIER" variable (:constant-flag t) nil [21332 21353]))          
+    :file "cdefs.h"
+    :pointmax 21438
+    :fsize 21437
+    :lastmodtime '(20741 31080 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("__dead2" . ((symbol "__attribute__" 5578 . 5591) (semantic-list "((noreturn))" 5591 . 5603)))
+          ("__pure2" . ((symbol "__attribute__" 5621 . 5634) (semantic-list "((const))" 5634 . 5643)))
+          ("__unavailable" . ((symbol "__attribute__" 6399 . 6412) (semantic-list "((unavailable))" 6412 . 6427)))
+          ("__DARWIN_ONLY_VERS_1050" . ((number "0" 9631 . 9632)))
+          ("__POSIX_C_DEPRECATED" (spp-arg-list ("ver") 18747 . 18752) . ((spp-symbol-merge ((symbol "___POSIX_C_DEPRECATED_STARTING_" 18753 . 18784) (symbol "ver" 18786 . 18789)) 18753 . 18789)))
+          ("__const" . ((CONST "const" 4280 . 4285)))
+          ("__DARWIN_1050" (spp-arg-list ("sym") 15520 . 15525) . ((symbol "__asm" 15527 . 15532) (semantic-list "(\"_\" __STRING(sym) __DARWIN_SUF_1050)" 15532 . 15569)))
+          ("__signed" . ((SIGNED "signed" 4344 . 4350)))
+          ("__unused" . ((symbol "__attribute__" 5794 . 5807) (semantic-list "((unused))" 5807 . 5817)))
+          ("__printflike" (spp-arg-list ("fmtarg" "firstvararg") 7188 . 7209) . ((symbol "__attribute__" 7214 . 7227) (semantic-list "((__format__ (__printf__, fmtarg, firstvararg)))" 7227 . 7275)))
+          ("__DARWIN_ALIAS" (spp-arg-list ("sym") 15158 . 15163) . ((symbol "__asm" 15165 . 15170) (semantic-list "(\"_\" __STRING(sym) __DARWIN_SUF_UNIX03)" 15170 . 15209)))
+          ("__DARWIN_ALIAS_C" (spp-arg-list ("sym") 15234 . 15239) . ((symbol "__asm" 15241 . 15246) (semantic-list "(\"_\" __STRING(sym) __DARWIN_SUF_NON_CANCELABLE __DARWIN_SUF_UNIX03)" 15246 . 15313)))
+          ("__DARWIN_1050INODE64" (spp-arg-list ("sym") 15942 . 15947) . ((symbol "__asm" 15948 . 15953) (semantic-list "(\"_\" __STRING(sym) __DARWIN_SUF_1050 __DARWIN_SUF_64_BIT_INO_T)" 15953 . 16016)))
+          ("_DARWIN_FEATURE_64_BIT_INODE" . ((number "1" 20100 . 20101)))
+          ("_DARWIN_FEATURE_UNIX_CONFORMANCE" . ((number "3" 21116 . 21117)))
+          ("__END_DECLS" . ((close-paren "}" 3483 . 3484)))
+          ("__volatile" . ((VOLATILE "volatile" 4370 . 4378)))
+          ("__used" . ((symbol "__attribute__" 5988 . 6001) (semantic-list "((used))" 6001 . 6009)))
+          ("__scanflike" (spp-arg-list ("fmtarg" "firstvararg") 7295 . 7316) . ((symbol "__attribute__" 7321 . 7334) (semantic-list "((__format__ (__scanf__, fmtarg, firstvararg)))" 7334 . 7381)))
+          ("__IDSTRING" (spp-arg-list ("name" "string") 7401 . 7414) . 
+              ((STATIC "static" 7415 . 7421) (CONST "const" 7422 . 7427) (CHAR "char" 7428 . 7432) (symbol "name" 7433 . 7437) (semantic-list "[]" 7437 . 7439) (symbol "__used" 7440 . 7446) (punctuation "=" 7447 . 7448) (symbol "string" 7449 . 7455)))
+          ("__DARWIN_ONLY_64_BIT_INO_T" . ((number "0" 9521 . 9522)))
+          ("__DARWIN_EXTSN_C" (spp-arg-list ("sym") 16115 . 16120) . ((symbol "__asm" 16122 . 16127) (semantic-list "(\"_\" __STRING(sym) __DARWIN_SUF_EXTSN __DARWIN_SUF_NON_CANCELABLE)" 16127 . 16193)))
+          ("__DARWIN_C_FULL" . ((number "900000L" 19174 . 19181)))
+          ("__DARWIN_C_LEVEL" . ((symbol "__DARWIN_C_FULL" 19434 . 19449)))
+          ("__CAST_AWAY_QUALIFIER" (spp-arg-list ("variable" "qualifier" "type") 21353 . 21380) . 
+              ((semantic-list "(type)" 21382 . 21388) (semantic-list "(long)" 21389 . 21395) (semantic-list "(variable)" 21395 . 21405)))
+          ("__STRING" (spp-arg-list ("x") 4255 . 4258) . ((punctuation "#" 4259 . 4260) (symbol "x" 4260 . 4261)))
+          ("__dead")
+          ("__pure")
+          ("__COPYRIGHT" (spp-arg-list ("s") 7496 . 7499) . ((symbol "__IDSTRING" 7500 . 7510) (semantic-list "(copyright,s)" 7510 . 7523)))
+          ("__DARWIN_ONLY_UNIX_CONFORMANCE" . ((number "1" 10753 . 10754)))
+          ("__DARWIN_VERS_1050" . ((number "1" 13413 . 13414)))
+          ("__DARWIN_NON_CANCELABLE" . ((number "0" 13532 . 13533)))
+          ("__DARWIN_1050ALIAS" (spp-arg-list ("sym") 15596 . 15601) . ((symbol "__asm" 15603 . 15608) (semantic-list "(\"_\" __STRING(sym) __DARWIN_SUF_1050 __DARWIN_SUF_UNIX03)" 15608 . 15665)))
+          ("__DARWIN_1050ALIAS_I" (spp-arg-list ("sym") 15819 . 15824) . ((symbol "__asm" 15825 . 15830) (semantic-list "(\"_\" __STRING(sym) __DARWIN_SUF_1050 __DARWIN_SUF_64_BIT_INO_T __DARWIN_SUF_UNIX03)" 15830 . 15913)))
+          ("_CDEFS_H_")
+          ("__inline" . ((INLINE "inline" 4421 . 4427)))
+          ("__deprecated" . ((symbol "__attribute__" 6229 . 6242) (semantic-list "((deprecated))" 6242 . 6256)))
+          ("__FBSDID" (spp-arg-list ("s") 7857 . 7860))
+          ("__DARWIN_EXTSN" (spp-arg-list ("sym") 16040 . 16045) . ((symbol "__asm" 16047 . 16052) (semantic-list "(\"_\" __STRING(sym) __DARWIN_SUF_EXTSN)" 16052 . 16090)))
+          ("__DARWIN_C_ANSI" . ((number "010000L" 19134 . 19141)))
+          ("__DARWIN_SUF_EXTSN" . ((string "\"$DARWIN_EXTSN\"" 15084 . 15099)))
+          ("__DARWIN_INODE64" (spp-arg-list ("sym") 15440 . 15445) . ((symbol "__asm" 15447 . 15452) (semantic-list "(\"_\" __STRING(sym) __DARWIN_SUF_64_BIT_INO_T)" 15452 . 15497)))
+          ("__BEGIN_DECLS" . 
+              ((EXTERN "extern" 3450 . 3456) (string "\"C\"" 3457 . 3460) (semantic-list "{" 3461 . 3462)))
+          ("__CONCAT" (spp-arg-list ("x" "y") 4226 . 4231) . ((spp-symbol-merge ((symbol "x" 4232 . 4233) (symbol "y" 4237 . 4238)) 4232 . 4238)))
+          ("__RCSID" (spp-arg-list ("s") 7563 . 7566) . ((symbol "__IDSTRING" 7567 . 7577) (semantic-list "(rcsid,s)" 7577 . 7586)))
+          ("__DARWIN_SUF_64_BIT_INO_T" . ((string "\"$INODE64\"" 14069 . 14079)))
+          ("__DARWIN_ALIAS_I" (spp-arg-list ("sym") 15338 . 15343) . ((symbol "__asm" 15345 . 15350) (semantic-list "(\"_\" __STRING(sym) __DARWIN_SUF_64_BIT_INO_T __DARWIN_SUF_UNIX03)" 15350 . 15415)))
+          ("__restrict")
+          ("__DARWIN_UNIX03" . ((number "1" 11930 . 11931)))
+          ("__DARWIN_64_BIT_INO_T" . ((number "1" 12988 . 12989)))
+          ("__DARWIN_SUF_UNIX03")
+          ("__DARWIN_ALIAS_STARTING" (spp-arg-list ("_mac" "_iphone" "x") 16510 . 16528) . ((spp-symbol-merge ((symbol "__DARWIN_ALIAS_STARTING_MAC_" 16531 . 16559) (symbol "_mac" 16561 . 16565)) 16531 . 16565) (semantic-list "(x)" 16565 . 16568)))
+          ("__P" (spp-arg-list ("protos") 4169 . 4177) . ((symbol "protos" 4178 . 4184)))
+          ("__SCCSID" (spp-arg-list ("s") 7628 . 7631) . ((symbol "__IDSTRING" 7632 . 7642) (semantic-list "(sccsid,s)" 7642 . 7652)))
+          ("__DARWIN_SUF_NON_CANCELABLE")
+          ("__DARWIN_NO_LONG_LONG" . ((semantic-list "(defined(__STRICT_ANSI__) \\
+				&& (__STDC_VERSION__-0 < 199901L) \\
+				&& !defined(__GNUG__))" 19652 . 19746)))
+          ("__PROJECT_VERSION" (spp-arg-list ("s") 7712 . 7715) . ((symbol "__IDSTRING" 7716 . 7726) (semantic-list "(project_version,s)" 7726 . 7745)))
+          ("__DARWIN_SUF_1050" . ((string "\"$1050\"" 14429 . 14436)))
+          ("__DARWIN_1050ALIAS_C" (spp-arg-list ("sym") 15694 . 15699) . ((symbol "__asm" 15700 . 15705) (semantic-list "(\"_\" __STRING(sym) __DARWIN_SUF_1050 __DARWIN_SUF_NON_CANCELABLE __DARWIN_SUF_UNIX03)" 15705 . 15790)))
+          ("_DARWIN_FEATURE_ONLY_UNIX_CONFORMANCE" . ((number "1" 20908 . 20909)))
+          )
+
+    )
+   (semanticdb-table "_symbol_aliasing.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_2_0" variable (:constant-flag t) nil [1623 1666])
+            ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_2_1" variable (:constant-flag t) nil [1868 1911])
+            ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_2_2" variable (:constant-flag t) nil [2113 2156])
+            ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_3_0" variable (:constant-flag t) nil [2358 2401])
+            ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_3_1" variable (:constant-flag t) nil [2603 2646])
+            ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_3_2" variable (:constant-flag t) nil [2848 2891])
+            ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_4_0" variable (:constant-flag t) nil [3093 3136])
+            ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_4_1" variable (:constant-flag t) nil [3338 3381])
+            ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_4_2" variable (:constant-flag t) nil [3583 3626])
+            ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_4_3" variable (:constant-flag t) nil [3828 3871])
+            ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_5_0" variable (:constant-flag t) nil [4073 4116])
+            ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_5_1" variable (:constant-flag t) nil [4318 4361])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_0" variable (:constant-flag t) nil [4497 4535])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_1" variable (:constant-flag t) nil [4729 4767])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_2" variable (:constant-flag t) nil [4961 4999])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_3" variable (:constant-flag t) nil [5193 5231])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_4" variable (:constant-flag t) nil [5425 5463])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_5" variable (:constant-flag t) nil [5657 5695])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_6" variable (:constant-flag t) nil [5889 5927])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_7" variable (:constant-flag t) nil [6121 6159])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_8" variable (:constant-flag t) nil [6353 6391]))          
+    :file "_symbol_aliasing.h"
+    :pointmax 6461
+    :fsize 6460
+    :lastmodtime '(20741 31080 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_2_2" (spp-arg-list ("x") 2156 . 2159))
+          ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_5_1" (spp-arg-list ("x") 4361 . 4364))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_7" (spp-arg-list ("x") 6159 . 6162) . ((symbol "x" 6163 . 6164)))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_8" (spp-arg-list ("x") 6391 . 6394) . ((symbol "x" 6395 . 6396)))
+          ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_4_0" (spp-arg-list ("x") 3136 . 3139))
+          ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_4_1" (spp-arg-list ("x") 3381 . 3384))
+          ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_4_2" (spp-arg-list ("x") 3626 . 3629))
+          ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_4_3" (spp-arg-list ("x") 3871 . 3874))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_0" (spp-arg-list ("x") 4535 . 4538) . ((symbol "x" 4539 . 4540)))
+          ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_3_0" (spp-arg-list ("x") 2401 . 2404))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_1" (spp-arg-list ("x") 4767 . 4770) . ((symbol "x" 4771 . 4772)))
+          ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_3_1" (spp-arg-list ("x") 2646 . 2649))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_2" (spp-arg-list ("x") 4999 . 5002) . ((symbol "x" 5003 . 5004)))
+          ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_3_2" (spp-arg-list ("x") 2891 . 2894))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_3" (spp-arg-list ("x") 5231 . 5234) . ((symbol "x" 5235 . 5236)))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_4" (spp-arg-list ("x") 5463 . 5466) . ((symbol "x" 5467 . 5468)))
+          ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_2_0" (spp-arg-list ("x") 1666 . 1669))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_5" (spp-arg-list ("x") 5695 . 5698) . ((symbol "x" 5699 . 5700)))
+          ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_2_1" (spp-arg-list ("x") 1911 . 1914))
+          ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_5_0" (spp-arg-list ("x") 4116 . 4119))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_6" (spp-arg-list ("x") 5927 . 5930) . ((symbol "x" 5931 . 5932)))
+          )
+
+    )
+   (semanticdb-table "_posix_availability.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("___POSIX_C_DEPRECATED_STARTING_198808L" variable (:constant-flag t) nil [1599 1637])
+            ("___POSIX_C_DEPRECATED_STARTING_199009L" variable (:constant-flag t) nil [1809 1847])
+            ("___POSIX_C_DEPRECATED_STARTING_199209L" variable (:constant-flag t) nil [2019 2057])
+            ("___POSIX_C_DEPRECATED_STARTING_199309L" variable (:constant-flag t) nil [2229 2267])
+            ("___POSIX_C_DEPRECATED_STARTING_199506L" variable (:constant-flag t) nil [2439 2477])
+            ("___POSIX_C_DEPRECATED_STARTING_200112L" variable (:constant-flag t) nil [2649 2687])
+            ("___POSIX_C_DEPRECATED_STARTING_200809L" variable (:constant-flag t) nil [2859 2897]))          
+    :file "_posix_availability.h"
+    :pointmax 2906
+    :fsize 2905
+    :lastmodtime '(20741 31080 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("___POSIX_C_DEPRECATED_STARTING_199506L")
+          ("___POSIX_C_DEPRECATED_STARTING_200112L")
+          ("___POSIX_C_DEPRECATED_STARTING_199009L")
+          ("___POSIX_C_DEPRECATED_STARTING_198808L")
+          ("___POSIX_C_DEPRECATED_STARTING_199209L")
+          ("___POSIX_C_DEPRECATED_STARTING_199309L")
+          ("___POSIX_C_DEPRECATED_STARTING_200809L")
+          )
+
+    )
+   (semanticdb-table "_types.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_SYS__TYPES_H_" variable (:constant-flag t) nil [1362 1376])
+            ("sys/cdefs.h" include (:system-flag t) nil [1378 1400])
+            ("machine/_types.h" include (:system-flag t) nil [1401 1428])
+            ("__PTHREAD_SIZE__" variable (:constant-flag t) nil [1492 1508])
+            ("__PTHREAD_ATTR_SIZE__" variable (:constant-flag t) nil [1532 1553])
+            ("__PTHREAD_MUTEXATTR_SIZE__" variable (:constant-flag t) nil [1570 1596])
+            ("__PTHREAD_MUTEX_SIZE__" variable (:constant-flag t) nil [1607 1629])
+            ("__PTHREAD_CONDATTR_SIZE__" variable (:constant-flag t) nil [1645 1670])
+            ("__PTHREAD_COND_SIZE__" variable (:constant-flag t) nil [1682 1703])
+            ("__PTHREAD_ONCE_SIZE__" variable (:constant-flag t) nil [1720 1741])
+            ("__PTHREAD_RWLOCK_SIZE__" variable (:constant-flag t) nil [1757 1780])
+            ("__PTHREAD_RWLOCKATTR_SIZE__" variable (:constant-flag t) nil [1798 1825])
+            ("__darwin_pthread_handler_rec" type
+               (:members 
+                  ( ("__routine" variable
+                       (:functionpointer-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2260 2296])
+                    ("__arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [2320 2342])
+                    ("__next" variable
+                       (:pointer 1
+                        :type ("__darwin_pthread_handler_rec" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2369 2413]))                  
+                :type "struct")
+                nil [2221 2416])
+            ("_opaque_pthread_attr_t" type
+               (:members 
+                  ( ("__sig" variable (:type "long") (reparse-symbol classsubparts) [2449 2460])
+                    ("__opaque" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2461 2498]))                  
+                :type "struct")
+                nil [2417 2501])
+            ("_opaque_pthread_cond_t" type
+               (:members 
+                  ( ("__sig" variable (:type "long") (reparse-symbol classsubparts) [2534 2545])
+                    ("__opaque" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2546 2583]))                  
+                :type "struct")
+                nil [2502 2586])
+            ("_opaque_pthread_condattr_t" type
+               (:members 
+                  ( ("__sig" variable (:type "long") (reparse-symbol classsubparts) [2623 2634])
+                    ("__opaque" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2635 2676]))                  
+                :type "struct")
+                nil [2587 2679])
+            ("_opaque_pthread_mutex_t" type
+               (:members 
+                  ( ("__sig" variable (:type "long") (reparse-symbol classsubparts) [2713 2724])
+                    ("__opaque" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2725 2763]))                  
+                :type "struct")
+                nil [2680 2766])
+            ("_opaque_pthread_mutexattr_t" type
+               (:members 
+                  ( ("__sig" variable (:type "long") (reparse-symbol classsubparts) [2804 2815])
+                    ("__opaque" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2816 2858]))                  
+                :type "struct")
+                nil [2767 2861])
+            ("_opaque_pthread_once_t" type
+               (:members 
+                  ( ("__sig" variable (:type "long") (reparse-symbol classsubparts) [2894 2905])
+                    ("__opaque" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2906 2943]))                  
+                :type "struct")
+                nil [2862 2946])
+            ("_opaque_pthread_rwlock_t" type
+               (:members 
+                  ( ("__sig" variable (:type "long") (reparse-symbol classsubparts) [2981 2992])
+                    ("__opaque" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2993 3032]))                  
+                :type "struct")
+                nil [2947 3035])
+            ("_opaque_pthread_rwlockattr_t" type
+               (:members 
+                  ( ("__sig" variable (:type "long") (reparse-symbol classsubparts) [3074 3085])
+                    ("__opaque" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [3086 3129]))                  
+                :type "struct")
+                nil [3036 3132])
+            ("_opaque_pthread_t" type
+               (:members 
+                  ( ("__sig" variable (:type "long") (reparse-symbol classsubparts) [3160 3171])
+                    ("__cleanup_stack" variable
+                       (:pointer 1
+                        :type ("__darwin_pthread_handler_rec" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3172 3226])
+                    ("__opaque" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [3227 3259]))                  
+                :type "struct")
+                nil [3133 3262])
+            ("__DARWIN_NULL" variable (:constant-flag t) nil [3508 3521])
+            ("__darwin_blkcnt_t" type
+               (:typedef ("__int64_t" type (:type "class") nil nil)
+                :superclasses "__int64_t"
+                :type "typedef")
+                nil [3771 3807])
+            ("__darwin_blksize_t" type
+               (:typedef ("__int32_t" type (:type "class") nil nil)
+                :superclasses "__int32_t"
+                :type "typedef")
+                nil [3827 3864])
+            ("__darwin_dev_t" type
+               (:typedef ("__int32_t" type (:type "class") nil nil)
+                :superclasses "__int32_t"
+                :type "typedef")
+                nil [3892 3925])
+            ("__darwin_fsblkcnt_t" type
+               (:typedef ("unsigned int")
+                :superclasses "unsigned int"
+                :type "typedef")
+                nil [3939 3980])
+            ("__darwin_fsfilcnt_t" type
+               (:typedef ("unsigned int")
+                :superclasses "unsigned int"
+                :type "typedef")
+                nil [4016 4057])
+            ("__darwin_gid_t" type
+               (:typedef ("__uint32_t" type (:type "class") nil nil)
+                :superclasses "__uint32_t"
+                :type "typedef")
+                nil [4093 4127])
+            ("__darwin_id_t" type
+               (:typedef ("__uint32_t" type (:type "class") nil nil)
+                :superclasses "__uint32_t"
+                :type "typedef")
+                nil [4163 4196])
+            ("__darwin_ino64_t" type
+               (:typedef ("__uint64_t" type (:type "class") nil nil)
+                :superclasses "__uint64_t"
+                :type "typedef")
+                nil [4232 4268])
+            ("__darwin_ino_t" type
+               (:typedef ("__darwin_ino64_t" type (:type "class") nil nil)
+                :superclasses "__darwin_ino64_t"
+                :type "typedef")
+                nil [4330 4370])
+            ("__darwin_mach_port_name_t" type
+               (:typedef ("__darwin_natural_t" type (:type "class") nil nil)
+                :superclasses "__darwin_natural_t"
+                :type "typedef")
+                nil [4533 4586])
+            ("__darwin_mach_port_t" type
+               (:typedef ("__darwin_mach_port_name_t" type (:type "class") nil nil)
+                :superclasses "__darwin_mach_port_name_t"
+                :type "typedef")
+                nil [4606 4661])
+            ("__darwin_mode_t" type
+               (:typedef ("__uint16_t" type (:type "class") nil nil)
+                :superclasses "__uint16_t"
+                :type "typedef")
+                nil [4681 4716])
+            ("__darwin_off_t" type
+               (:typedef ("__int64_t" type (:type "class") nil nil)
+                :superclasses "__int64_t"
+                :type "typedef")
+                nil [4750 4783])
+            ("__darwin_pid_t" type
+               (:typedef ("__int32_t" type (:type "class") nil nil)
+                :superclasses "__int32_t"
+                :type "typedef")
+                nil [4817 4850])
+            ("__darwin_pthread_attr_t" type
+               (:typedef ("_opaque_pthread_attr_t" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :superclasses "_opaque_pthread_attr_t"
+                :type "typedef")
+                nil [4886 4951])
+            ("__darwin_pthread_cond_t" type
+               (:typedef ("_opaque_pthread_cond_t" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :superclasses "_opaque_pthread_cond_t"
+                :type "typedef")
+                nil [4982 5047])
+            ("__darwin_pthread_condattr_t" type
+               (:typedef ("_opaque_pthread_condattr_t" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :superclasses "_opaque_pthread_condattr_t"
+                :type "typedef")
+                nil [5078 5151])
+            ("__darwin_pthread_key_t" type
+               (:typedef ("unsigned long")
+                :superclasses "unsigned long"
+                :type "typedef")
+                nil [5182 5227])
+            ("__darwin_pthread_mutex_t" type
+               (:typedef ("_opaque_pthread_mutex_t" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :superclasses "_opaque_pthread_mutex_t"
+                :type "typedef")
+                nil [5258 5325])
+            ("__darwin_pthread_mutexattr_t" type
+               (:typedef ("_opaque_pthread_mutexattr_t" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :superclasses "_opaque_pthread_mutexattr_t"
+                :type "typedef")
+                nil [5356 5431])
+            ("__darwin_pthread_once_t" type
+               (:typedef ("_opaque_pthread_once_t" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :superclasses "_opaque_pthread_once_t"
+                :type "typedef")
+                nil [5462 5527])
+            ("__darwin_pthread_rwlock_t" type
+               (:typedef ("_opaque_pthread_rwlock_t" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :superclasses "_opaque_pthread_rwlock_t"
+                :type "typedef")
+                nil [5558 5627])
+            ("__darwin_pthread_rwlockattr_t" type
+               (:typedef ("_opaque_pthread_rwlockattr_t" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :superclasses "_opaque_pthread_rwlockattr_t"
+                :type "typedef")
+                nil [5658 5735])
+            ("__darwin_pthread_t" type
+               (:typedef ("_opaque_pthread_t" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :pointer 1
+                :superclasses "_opaque_pthread_t"
+                :type "typedef")
+                nil [5766 5822])
+            ("__darwin_sigset_t" type
+               (:typedef ("__uint32_t" type (:type "class") nil nil)
+                :superclasses "__uint32_t"
+                :type "typedef")
+                nil [5853 5890])
+            ("__darwin_suseconds_t" type
+               (:typedef ("__int32_t" type (:type "class") nil nil)
+                :superclasses "__int32_t"
+                :type "typedef")
+                nil [5914 5953])
+            ("__darwin_uid_t" type
+               (:typedef ("__uint32_t" type (:type "class") nil nil)
+                :superclasses "__uint32_t"
+                :type "typedef")
+                nil [5979 6013])
+            ("__darwin_useconds_t" type
+               (:typedef ("__uint32_t" type (:type "class") nil nil)
+                :superclasses "__uint32_t"
+                :type "typedef")
+                nil [6036 6075])
+            ("__darwin_uuid_t" type
+               (:typedef ("unsigned char")
+                :superclasses "unsigned char"
+                :type "typedef")
+                nil [6101 6143])
+            ("__darwin_uuid_string_t" type
+               (:typedef ("char")
+                :superclasses "char"
+                :type "typedef")
+                nil [6144 6184]))          
+    :file "_types.h"
+    :pointmax 6214
+    :fsize 6213
+    :lastmodtime '(20741 31080 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("__PTHREAD_CONDATTR_SIZE__" . ((number "8" 1672 . 1673)))
+          ("__PTHREAD_SIZE__" . ((number "1168" 1519 . 1523)))
+          ("__DARWIN_NULL" . ((symbol "__null" 3522 . 3528)))
+          ("__PTHREAD_RWLOCKATTR_SIZE__" . ((number "16" 1831 . 1833)))
+          ("__PTHREAD_MUTEX_SIZE__" . ((number "56" 1634 . 1636)))
+          ("__PTHREAD_COND_SIZE__" . ((number "40" 1709 . 1711)))
+          ("_SYS__TYPES_H_")
+          ("__PTHREAD_MUTEXATTR_SIZE__" . ((number "8" 1597 . 1598)))
+          ("__PTHREAD_RWLOCK_SIZE__" . ((number "192" 1786 . 1789)))
+          ("__PTHREAD_ATTR_SIZE__" . ((number "56" 1559 . 1561)))
+          ("__PTHREAD_ONCE_SIZE__" . ((number "8" 1747 . 1748)))
+          )
+
+    )
+   (semanticdb-table "_structs.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("sys/cdefs.h" include (:system-flag t) nil [1341 1363])
+            ("sys/_types.h" include (:system-flag t) nil [1364 1387]))          
+    :file "_structs.h"
+    :pointmax 7911
+    :fsize 7910
+    :lastmodtime '(20741 31080 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!usr!include!sys!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

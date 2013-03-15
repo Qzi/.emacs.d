@@ -39,7 +39,7 @@
 ;; speedbar
 ;(autoload 'speedbar-frame-mode "speedbar" "Popup a speedbar frame" t)
 ;(autoload 'speedbar-get-focus "speedbar" "Jump to speedbar frame" t)
-;;(global-set-key [(f4)] 'speedbar-get-focus)
+;;(global-set-key [(f5)] 'speedbar-get-focus)
 
 ;;(require 'sr-speedbar)
 ;;(global-set-key (kbd "s-s") 'sr-speedbar-toggle)  
@@ -51,6 +51,7 @@
 (setq recentf-max-menu-items 25)
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
+
 ;; sr-speedbar
 ;; ------------
 ;; deps: sr-speedbar.el
@@ -60,16 +61,24 @@
 (setq speedbar-use-images nil)
 (setq sr-speedbar-width 30)
 (setq sr-speedbar-right-side t)
-(global-set-key (kbd "<f4>") (lambda()
-			       (interactive)
-			         (sr-speedbar-toggle)))
+(global-set-key (kbd "<f4>") 
+		(lambda() (interactive)
+		       (sr-speedbar-toggle)
+		       (sr-speedbar-select-window)))
+
+;; speedbar
+;(autoload 'speedbar-frame-mode "speedbar" "Popup a speedbar frame" t)
+;(autoload 'speedbar-get-focus "speedbar" "Jump to speedbar frame" t)
+;;(global-set-key [(f4)] 'speedbar-get-focus)
+
+;;(require 'sr-speedbar)
 
 
 ;; ecb 
 ;; -----
 ;; deps: ecb snapshot for emacs 2.4.2
 (require 'ecb) ;; emacs 24.2 need ecb snapshot
-;;(setq ecb-auto-activate t)    
+(setq ecb-auto-activate t)    
 (setq ecb-tip-of-the-day nil)
 (setq stack-trace-on-error nil)
 (setq ecb-options-version "2.40")

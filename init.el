@@ -58,13 +58,8 @@
 
 (setq cedet-sys-include-dirs (list
                               "/usr/include"
-                              "/usr/include/bits"
-                              "/usr/include/glib-2.0"
-                              "/usr/include/gnu"
-                              "/usr/include/gtk-2.0"
-                              "/usr/include/gtk-2.0/gdk-pixbuf"
-                              "/usr/include/gtk-2.0/gtk"
-                              "/usr/local/include"
+			      "/usr/include/gcc/darwin/4.2"
+			      "/usr/include/c++/4.2.1"
                               "/usr/local/include"))
 
 (let ((include-dirs cedet-user-include-dirs))
@@ -154,8 +149,6 @@ the mru bookmark stack."
 (tabbar-mode 1)
 (global-set-key [(meta j)] 'tabbar-backward)
 (global-set-key [(meta k)] 'tabbar-forward)
-
-
 
 
 

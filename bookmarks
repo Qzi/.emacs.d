@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("defcustom"
+((".emacs.d"
+ (filename . "~/.emacs.d/")
+ (front-context-string . ".git\n  -rw-r--r-")
+ (rear-context-string . "42 Mar 16 03:21 ")
+ (position . 214))
+("defcustom"
  (position . 524)
  (help-fn . describe-function)
  (help-args defcustom)

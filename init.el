@@ -20,6 +20,9 @@
 (require 'init-keymap) ;; key map
 (require 'init-postfix) ;; 放到大多数库的后面
 
+
+;; 以下待验证
+
 (require 'cedet)
 (global-ede-mode t)
 ;;(semantic-mode)
@@ -144,20 +147,14 @@ the mru bookmark stack."
                       'mark)
   ad-do-it)
 
-;; tabbar
-(require 'tabbar)
-(tabbar-mode 1)
-(global-set-key [(meta j)] 'tabbar-backward)
-(global-set-key [(meta k)] 'tabbar-forward)
 
-
-
-;; 下面功能正在验证中  ...
+;;; 下面功能正在验证中  ...
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes (quote ("21d9280256d9d3cf79cbcf62c3e7f3f243209e6251b215aede5026e0c5ad853f" default)))
  '(ecb-auto-update-methods-after-save t)
  '(ecb-directories-update-speedbar t)
  '(ecb-fix-window-size (quote width))
@@ -173,3 +170,10 @@ the mru bookmark stack."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+
+(put 'upcase-region 'disabled nil)
+
+
+
+

@@ -15,7 +15,6 @@
 ;; Local repo
 ;; ------------
 ;; desc: js2-mode for javascript
-(setq load-path (append (list (expand-file-name "~/.emacs.d/elpa/js2-mode-20130307")) load-path))
 
 ;; desc: yaml
 (add-to-list 'load-path "~/.emacs.d/elpa/yaml-mode-0.0.7")
@@ -30,6 +29,10 @@
 ;; sr-speedbar
 (add-to-list 'load-path "~/.emacs.d/elpa/sr-speedbar-0.1.8")
 
+;; powerline
+;;(add-to-list 'load-path "~/.emacs.d/plugins/emacs-powerline")
+(add-to-list 'load-path "~/.emacs.d/plugins/powerline")
+;;(load-file "~/.emacs.d/plugins/emacs-powerline/powerline.el")
 
 (provide 'init-repo)
 

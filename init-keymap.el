@@ -14,7 +14,7 @@
 ;;(global-set-key [(meta \3)] 'move-end-of-line)
 
 ;; defun in init-utils
-(global-set-key (kbd "C-c . l") 'copy-lines)
+(global-set-key (kbd "C-c ; C-l") 'copy-lines)
 
 ;; ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)

@@ -22,60 +22,60 @@
 ;; use yas/completing-prompt when ONLY when `M-x yas/insert-snippet'
 ;; thanks to capitaomorte for providing the trick.
 (defadvice yas/insert-snippet (around use-completing-prompt activate)
-     "Use `yas/completing-prompt' for `yas/prompt-functions' but only here..."
- (let ((yas/prompt-functions '(yas/completing-prompt)))
-   ad-do-it))  
+  "Use `yas/completing-prompt' for `yas/prompt-functions' but only here..."
+     (let ((yas/prompt-functions '(yas/completing-prompt)))
+       ad-do-it))  
 
- ;;; use popup menu for yas-choose-value
- (require 'popup)
- ;; add some shotcuts in popup menu mode
- (define-key popup-menu-keymap (kbd "M-n") 'popup-next)
- (define-key popup-menu-keymap (kbd "TAB") 'popup-next)
- (define-key popup-menu-keymap (kbd "<tab>") 'popup-next)
- (define-key popup-menu-keymap (kbd "<backtab>") 'popup-previous)
- (define-key popup-menu-keymap (kbd "M-p") 'popup-previous)
+;;; use popup menu for yas-choose-value
+(require 'popup)
+;; add some shotcuts in popup menu mode
+(define-key popup-menu-keymap (kbd "M-n") 'popup-next)
+(define-key popup-menu-keymap (kbd "TAB") 'popup-next)
+(define-key popup-menu-keymap (kbd "<tab>") 'popup-next)
+(define-key popup-menu-keymap (kbd "<backtab>") 'popup-previous)
+(define-key popup-menu-keymap (kbd "M-p") 'popup-previous)
 
- (defun yas-popup-isearch-prompt (prompt choices &optional display-fn)
-   (when (featurep 'popup)
-     (popup-menu*
-      (mapcar
-       (lambda (choice)
-   (popup-make-item
-    (or (and display-fn (funcall display-fn choice))
-        choice)
-    :value choice))
-       choices)
-      :prompt prompt
-      ;; start isearch mode immediately
-      :isearch t
-      )))
+(defun yas-popup-isearch-prompt (prompt choices &optional display-fn)
+  (when (featurep 'popup)
+    (popup-menu*
+     (mapcar
+      (lambda (choice)
+  (popup-make-item
+   (or (and display-fn (funcall display-fn choice))
+       choice)
+   :value choice))
+      choices)
+     :prompt prompt
+     ;; start isearch mode immediately
+     :isearch t
+     )))
 
  (setq yas-prompt-functions '(yas-popup-isearch-prompt yas-ido-prompt yas-no-prompt))
 
 
- ;; auto complete
- ;; =============
- (add-to-list 'load-path "~/.emacs.d/elpa/auto-complete-1.4")
- (require 'auto-complete-config)
- (add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-1.4/dict")
- (ac-config-default)
- (global-auto-complete-mode t)
- (global-set-key (kbd "M-[") 'auto-complete)
-
- (setq-default ac-sources 
-               '(ac-source-yasnippet ;; need yasnippet, 不兼容了现在
-                 ac-source-filename
-                 ac-source-words-in-all-buffer
-                 ac-source-functions
-                 ac-source-variables
-                 ac-source-symbols
-                 ac-source-semantic
-                 ac-source-abbrev
-                 ac-source-words-in-same-mode-buffers
-                 ac-source-dictionary
-                 ac-source-css-property
-                 ac-source-emacs-lisp-features
-                 ac-source-files-in-current-dir))
+;; auto complete
+;; =============
+(add-to-list 'load-path "~/.emacs.d/elpa/auto-complete-1.4")
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-1.4/dict")
+(ac-config-default)
+(global-auto-complete-mode t)
+(global-set-key (kbd "M-[") 'auto-complete)
+;; 设置自动提示的资料来源
+(setq-default ac-sources 
+              '(ac-source-yasnippet ;; need yasnippet, 不兼容了现在
+                ac-source-filename
+                ac-source-words-in-all-buffer
+                ac-source-functions
+                ac-source-variables
+                ac-source-symbols
+                ac-source-semantic
+                ac-source-abbrev
+                ac-source-words-in-same-mode-buffers
+                ac-source-dictionary
+                ac-source-css-property
+                ac-source-emacs-lisp-features
+                ac-source-files-in-current-dir))
 
 ;; desc: ac-popup-tip-helper 
 ;; path: ~/.emacs.d/plugins/ac-pos-tip

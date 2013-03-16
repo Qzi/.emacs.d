@@ -4,7 +4,7 @@
 
 
 ;;;; elisp
-(add-to-list 'auto-mode-alist '("\\.el$" . lisp-mode)) 
+(add-to-list 'auto-mode-alist '("\\.el$" . lisp-interaction-mode)) 
 ;;
 ;;;; common lisp
 (add-to-list 'auto-mode-alist '("\\.lisp$" . lisp-mode)) 

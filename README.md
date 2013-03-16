@@ -72,3 +72,7 @@ add-hook：该函数用来将某个函数与指定的模式绑定，当emacs进�
 
 require：该函数检测在当前emacs会话中是否加载了指定的插件，如果没有，则使用load函数来从系统的LISP目录中加载指定的插件。  
 (require 'zencoding-mode)     
+
+
+### emacs compile
+`emacs -batch -f batch-byte-compile powerline.el` 编译成.elc  

@@ -78,7 +78,7 @@
 ;; -----
 ;; deps: ecb snapshot for emacs 2.4.2
 (require 'ecb) ;; emacs 24.2 need ecb snapshot
-(setq ecb-auto-activate t)    
+;;(setq ecb-auto-activate t)    
 (setq ecb-tip-of-the-day nil)
 (setq stack-trace-on-error nil)
 (setq ecb-options-version "2.40")
@@ -103,6 +103,16 @@
 
 (add-hook 'c-mode-hook 'my-common-mode-auto-pair) 
 (add-hook 'c++-mode-hook 'my-common-mode-auto-pair) 
+
+;; dired-x
+(add-hook 'dired-load-hook
+	  (lambda ()
+	    (load "dired-x")
+	    ))
+(add-hook 'dired-mode-hook
+	  (lambda ()
+	    ))
+(define-key global-map "\C-x\C-j" 'dired-jump)
 
 
 (provide 'init-env)

@@ -6,39 +6,44 @@
 ;; window-system setting
 (if (display-graphic-p)
  (if window-system
-    (set-frame-size (selected-frame) 100 30)) ;; {column:100, row:24}
+     (set-frame-width nil 100))
 )
+
+
 ;; tool-bar-mode
 (tool-bar-mode 0)
-;;
+
+
 ;; scroll-bar-mode
 (scroll-bar-mode 0)
 
-;; speedbar
-;;(if (display-graphic-p)
-;;    (speedbar)
-;;)
-;;
+
 ;; column number
 (column-number-mode t)
+
 
 ;; size of file 
 (size-indication-mode t)
 
+
 ;; resize mimibuffer windows
 (setq resize-mini-windows t)
+
 
 ;; load theme
 (if (display-graphic-p)
     (load-theme 'tango)
-    (load-theme 'wombat) ;; else {}
-    )
+  (load-theme 'wombat) ;; else {}
+  )
+
 
 ;; 让emacs 标题显示当前buffer名字
-(setq frame-title-format "%b@emacs")
+(setq frame-title-format "%b @emacs")
+
 
 ;; 高亮当前行
 (global-hl-line-mode t)
+
 
 ;; fill-column-indicator
 (require 'fill-column-indicator)
@@ -60,85 +65,39 @@
 ;; link: https://github.com/jonathanchu/emacs-powerline
 ;; -----------------------
 (require 'powerline)
-
-(defun graphic-powerline-config ()
-  "powerline setting for graphic"
-  (interactive)
-  (progn
-   (setq powerline-arrow-shape 'arrow)
-   (custom-set-faces
-    '(mode-line ((t (:foreground "white" :background "#0044cc" :box nil))))
-    '(mode-line-inactive ((t (:foreground "white" :background "#262626" :box nil))))
-    )
-   (setq powerline-color1 "#0088cc")
-   (setq powerline-color2 "white")
-   )
-  )
-
-(defun terminal-powerline-config()
-   " powerline setting for terminal"
-   (interactive)
-   (setq powerline-arrow-shape 'arrow)
-   (setq powerline-color1 "grey22")
-   (setq powerline-color2 "grey22") 
-   (custom-set-faces
-    '(mode-line ((t (:foreground "grey44" :background "grey22" :box nil))))
-    '(mode-line-inactive ((t (:foreground "grey22" :background "grey44" :box nil))))
-    ))
-
+;; 
+;;(defun graphic-powerline-config ()
+;;  "powerline setting for graphic"
+;;  (interactive)
+;;  (progn
+;;   (setq powerline-arrow-shape 'arrow)
+;;   (custom-set-faces
+;;    '(mode-line ((t (:foreground "white" :background "#0044cc" :box nil))))
+;;    '(mode-line-inactive ((t (:foreground "white" :background "#262626" :box nil))))
+;;    )
+;;   (setq powerline-color1 "#0088cc")
+;;   (setq powerline-color2 "white")
+;;   )
+;;  )
+;; 
+;;(defun terminal-powerline-config()
+;;   " powerline setting for terminal"
+;;   (interactive)
+;;   (setq powerline-arrow-shape 'arrow)
+;;   (setq powerline-color1 "grey22")
+;;   (setq powerline-color2 "grey22") 
+;;   (custom-set-faces
+;;    '(mode-line ((t (:foreground "grey44" :background "grey22" :box nil))))
+;;    '(mode-line-inactive ((t (:foreground "grey22" :background "grey44" :box nil))))
+;;    ))
+;;
 ;;  "根据是否图形界面加载配置"
 ;;(if (display-graphic-p)
 ;;    (graphic-powerline-config)
   ;;  (terminal-powerline-config)
 ;;)
-;;
-;;(require 'powerline)
-;;(powerline-default)
-;;(setq-default mode-line-format
-;;              '("%e"
-;;                (:eval
-;;                 (let* ((active (eq (frame-selected-window) (selected-window)))
-;;                        (face1 (if active 'red 'powerline-inactive1))
-;;                        (face2 (if active 'powerline-active2 'powerline-inactive2))
-;;                        (lhs (list
-;;                              (powerline-raw "%*" nil 'l)
-;;                              (powerline-buffer-size nil 'l)
-;;                              (powerline-buffer-id nil 'l)
-;;
-;;                              (powerline-raw " ")
-;;                              (powerline-arrow-right nil face1)
-;;
-;;                              (powerline-major-mode face1 'l)
-;;                              (powerline-minor-modes face1 'l)
-;;                              (powerline-raw mode-line-process face1 'l)
-;;
-;;                              (powerline-narrow face1 'l)
-;;
-;;                              (powerline-arrow-right face1 face2)
-;;
-;;                              (powerline-vc face2)
-;;                              ))
-;;                        (rhs (list
-;;                              (powerline-raw global-mode-string face2 'r)
-;;
-;;                              (powerline-arrow-left face2 face1)
-;;
-;;                              (powerline-raw "%4l" face1 'r)
-;;                              (powerline-raw ":" face1)
-;;                              (powerline-raw "%3c" face1 'r)
-;;
-;;                              (powerline-arrow-left face1 nil)
-;;                              (powerline-raw " ")
-;;
-;;                              (powerline-raw "%6p" nil 'r)
-;;
-;;                              (powerline-hud face2 face1))))
-;;                   (concat
-;;                    (powerline-render lhs)
-;;                    (powerline-fill face2 (powerline-width rhs))
-;;                    (powerline-render rhs))))))
-;;
-;;
+;;												 
+;;												 
 
 ;; powerline.el
 (defun arrow-right-xpm (color1 color2)
@@ -245,9 +204,6 @@ static char * arrow_right[] = {
 (set-face-attribute 'mode-line-inactive nil
                     :foreground "#fff"
                     :background color4)
-
-
-
 
 
 (provide 'init-ui)

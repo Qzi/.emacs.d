@@ -4,11 +4,15 @@
   :tables (list 
    (semanticdb-table "main.cpp"
     :major-mode 'c++-mode
-    :tags nil
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("functions.h" include nil nil [21 43])
+            ("functions.h" include nil nil [44 44])
+            ("main" function (:type "int") nil [46 192]))          
     :file "main.cpp"
-    :pointmax 192
-    :fsize 191
-    :lastmodtime '(20795 43257 0 0)
+    :pointmax 215
+    :fsize 192
+    :lastmodtime '(20806 12524 0 0)
     :unmatched-syntax 'nil
     )
    (semanticdb-table "hello.cpp"

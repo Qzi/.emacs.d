@@ -1,3 +1,4 @@
+
 ;; author: qzi
 ;; email: i@qzier.com
 ;; content: emacs setting
@@ -17,6 +18,7 @@
 (require 'init-html)
 (require 'init-js)
 (require 'init-markdown)
+(require 'init-tex)
 (require 'init-keymap) ;; key map
 (require 'init-postfix) ;; 放到大多数库的后面
 
@@ -155,6 +157,7 @@ the mru bookmark stack."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes (quote ("21d9280256d9d3cf79cbcf62c3e7f3f243209e6251b215aede5026e0c5ad853f" default)))
+ '(default-frame-alist (quote ((nil . fullheight) (vertical-scroll-bars))))
  '(ecb-auto-update-methods-after-save t)
  '(ecb-directories-update-speedbar t)
  '(ecb-fix-window-size (quote width))
@@ -162,6 +165,7 @@ the mru bookmark stack."
  '(ecb-options-version "2.40")
  '(ecb-primary-secondary-mouse-buttons (quote mouse-1--mouse-2))
  '(ecb-source-path (quote (("~/.emacs.d" "_emacs.d") ("~/learning" "learning"))))
+ '(send-mail-function (quote mailclient-send-it))
  '(speedbar-show-unknown-files t)
  '(speedbar-use-images nil))
 (custom-set-faces
@@ -172,8 +176,42 @@ the mru bookmark stack."
  )
 
 
-(put 'upcase-region 'disabled nil)
+
+;; anything
+(add-to-list 'load-path "~/.emacs.d/plugins/helm")
+(require 'helm-config)
+;;(helm-mode 1)
+(global-set-key (kbd "C-c h") 'helm-mini)
 
 
+;;定义在cpp文件和.h文件中切换的函数
+(defun switch-source-file ()
+  (interactive)
+  (setq file-name (buffer-file-name))
+  (if (string-match "\\.c" file-name)
+      (find-file (replace-regexp-in-string "\\.c" "\.h" file-name)))
+  (if (string-match "\\.h" file-name)
+      (find-file (replace-regexp-in-string "\\.h" "\.c" file-name))))
+
+(global-set-key [f12] 'switch-source-file)
 
 
+;; 输入 inc , 可以自动提示输入文件名称,可以自动补全.
+;;(define-skeleton skeleton-include
+;;  "generate include""" ""
+;;  > "#include \""
+;;  (completing-read "Include File:"
+;;                   (mapcar #'(lambda (f) (list f ))
+;;                           (apply 'append
+;;                                  (mapcar
+;;                                   #'(lambda (dir)
+;;                                       (directory-files dir))
+;;                                   (list "/usr/include"
+;; 					 "./"
+;;                                         "/usr/local/include"
+;;                                         "/usr/include/c++/4.2.4"
+;; 					 "/usr/include/c++/4.1"
+;; 					 "/usr/include/c++/4.1.3"
+;; 					 "/usr/include/c++/4.2"
+;; 					 )))))
+;;"\"")

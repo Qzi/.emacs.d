@@ -2,3 +2,6 @@ ls
 history
 ls
 cd ..
+e init.el.before_ecb_2.40__2
+opena init.el
+openo init.el

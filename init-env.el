@@ -29,19 +29,26 @@
 ;; c自动缩进的宽度设置为4
 (setq c-basic-offset 4)
 
-;; 不生成#filename#
-(setq auto-save-default nil)
+;; ido-mode
+(ido-mode t)
 
-;;关闭临时备份
+
+;; Enable CUA selection mode without the C-z/C-x/C-c/C-v bindings.
+(cua-selection-mode t)
+;;(setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
+
+;; 不生成#filename#
 (setq auto-save-default nil) 
 (setq make-backup-files nil)
+
+;; 关闭大小写
+(put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
 
 ;; speedbar
 ;(autoload 'speedbar-frame-mode "speedbar" "Popup a speedbar frame" t)
 ;(autoload 'speedbar-get-focus "speedbar" "Jump to speedbar frame" t)
 ;;(global-set-key [(f5)] 'speedbar-get-focus)
-
-;;(require 'sr-speedbar)
 ;;(global-set-key (kbd "s-s") 'sr-speedbar-toggle)  
 
 ;; recentf for history
@@ -66,13 +73,6 @@
 		       (sr-speedbar-toggle)
 		       (sr-speedbar-select-window)))
 
-;; speedbar
-;(autoload 'speedbar-frame-mode "speedbar" "Popup a speedbar frame" t)
-;(autoload 'speedbar-get-focus "speedbar" "Jump to speedbar frame" t)
-;;(global-set-key [(f4)] 'speedbar-get-focus)
-
-;;(require 'sr-speedbar)
-
 
 ;; ecb 
 ;; -----
@@ -83,26 +83,12 @@
 (setq stack-trace-on-error nil)
 (setq ecb-options-version "2.40")
 
-;;括号匹配
-;;自动补全括号
-(defun my-common-mode-auto-pair () 
-(interactive) 
-(make-local-variable 'skeleton-pair-alist) 
-(setq skeleton-pair-alist '( 
-(? ? _ "''")
-(? ? _ """")
-(? ? _ "()")
-(? ? _ "[]")
-(?{ \n > _ \n ?} >)))
-(setq skeleton-pair t)
-(local-set-key (kbd "(") 'skeleton-pair-insert-maybe) 
-(local-set-key (kbd "\"") 'skeleton-pair-insert-maybe) 
-(local-set-key (kbd "{") 'skeleton-pair-insert-maybe) 
-(local-set-key (kbd "\'") 'skeleton-pair-insert-maybe) 
-(local-set-key (kbd "[") 'skeleton-pair-insert-maybe)) 
 
+;;括号匹配
 (add-hook 'c-mode-hook 'my-common-mode-auto-pair) 
 (add-hook 'c++-mode-hook 'my-common-mode-auto-pair) 
+(add-hook 'lisp-mode-hook 'my-common-mode-auto-pair)
+
 
 ;; dired-x
 (add-hook 'dired-load-hook
@@ -113,6 +99,11 @@
 	  (lambda ()
 	    ))
 (define-key global-map "\C-x\C-j" 'dired-jump)
+
+
+;; shell
+(defalias 'emacs 'find-file)
+(defalias 'emacso 'find-file-other-window)
 
 
 (provide 'init-env)

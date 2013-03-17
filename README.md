@@ -83,5 +83,5 @@ require：该函数检测在当前emacs会话中是否加载了指定的插件�
 `cua-set-rectangle-mark` 开启标记  
 标记后`M-b`用空白替换rectangle  
 `M-o` rect的内容右移，选中rect用空格填充  
-`M-s` 把rect中的每一行替换为一个字符串
-`C-d` 删除rect ;;
+`M-s` 把rect中的每一行替换为一个字符串  
+`C-d` 删除rect

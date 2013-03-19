@@ -1,0 +1,53 @@
+默认情况下该模式是不开启的，要开启可以用 M-x abbrev-mode
+ 
+定义缩写也是分全局和局部的
+ThisIsAFuncionName  光标置于该单词之后，C-x a g  再输入a 当再输入a的时候 C-x a e就会看到a扩展成为前面那个长单词了。
+C-x a l 与mode有关的abbrev.
+
+C-x a g ==>add-global-abbrev
+C-x a l ==> add-mode-abbrev
+上面两个是先给出被缩写的然后再给缩写的。先给ThisIsAFuncionName  再给a.
+
+还有两个函数没有快捷键但是感觉比上面的方便些：
+define-global-abbrev
+define-mode-abbrev
+要先输入缩写的名字然后再给具体的缩写。感觉比较方便。
+
+技巧：
+把你想要扩展的文字放在一个buffer的开头，多次按下C-u，然后再C-x a g，便可以为整个你想扩展的文字添加扩展。
+可以用edit-abbrev命令来修改现有的abbrev。
+
+;abbrev-mode
+;Abbrev-mode always open
+(setq default-abbrev-mode t)
+(setq abbrev-file-name             ;; tell emacs where to read abbrev
+        "~/.emacs.d/abbrev_defs")    ;; definitions from...
+(setq save-abbrevs t)              ;; save abbrevs when files are saved
+                                     ;; you will be asked before the abbreviations are saved
+;Avoid errors if the abbrev-file is missing
+(if (file-exists-p abbrev-file-name)
+        (quietly-read-abbrev-file))
+
+
+
+-----------------------------------------------------
+
+
+
+用make-face创建了face之后，可以通过以下这段代码给face指定fontset
+(set-face-attribute 'dync nil :fontset "fontset-dyn")
+以上代码给名为dync的face指定了一个名为fontset-dyn的fontset。
+
+这样设置之后去用face，你会发现，创建fontset时create-fontset-from-fontset-spec的第一个参数指定的字体似乎没有起作用。
+为了让这个字体起作用，你还需要执行下面这段代码来设置face的另一个属性font
+(set-face-attribute 'dync nil :font "fontset-dyn")
+注意，传进去的值仍旧是原来那个fontset。
+
+这两个属性的设置缺一不可。
+
+注意：
+M-x describe-face显示了face具有fontset属性
+但customize中却无法指定face的fontset属性
+elisp manual的Face Attributes(38.12.2 )一节所列出的face属性中也没有fontset
+elisp manual的Common Item Keywords(14.1)一节所列出的关键字中也没有:fontset
+在deface中使用:fontset关键字指定fontset无效，只能通过set-face-attribute进行。

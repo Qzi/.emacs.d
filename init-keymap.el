@@ -24,27 +24,27 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
 
-;; desc: ecb
-;; deps: ecb+cedet
-;; 各窗口间切换
-(global-set-key (kbd "C-c h") 'windmove-left)	
-(global-set-key (kbd "C-c l") 'windmove-right)
-(global-set-key (kbd "C-c k") 'windmove-up)
-(global-set-key (kbd "C-c j") 'windmove-down)
- 
-;; 隐藏和显示ecb窗口
-(define-key global-map [(f1)] 'ecb-hide-ecb-windows)
-(define-key global-map [(f2)] 'ecb-show-ecb-windows)
- 
-;; 使某一ecb窗口最大化
-(define-key global-map "\C-c\ 1" 'ecb-maximize-window-directories)
-(define-key global-map "\C-c\ 2" 'ecb-maximize-window-sources)
-(define-key global-map "\C-c\ 3" 'ecb-maximize-window-methods)
-(define-key global-map "\C-c\ 4" 'ecb-maximize-window-history)
-
-;; 恢复原始窗口布局
-(define-key global-map "\C-c`" 'ecb-restore-default-window-sizes)
-
+;;;; desc: ecb
+;;;; deps: ecb+cedet
+;;;; 各窗口间切换
+;;(global-set-key (kbd "C-c h") 'windmove-left)	
+;;(global-set-key (kbd "C-c l") 'windmove-right)
+;;(global-set-key (kbd "C-c k") 'windmove-up)
+;;(global-set-key (kbd "C-c j") 'windmove-down)
+;; 
+;;;; 隐藏和显示ecb窗口
+;;(define-key global-map [(f1)] 'ecb-hide-ecb-windows)
+;;(define-key global-map [(f2)] 'ecb-show-ecb-windows)
+;; 
+;;;; 使某一ecb窗口最大化
+;;(define-key global-map "\C-c\ 1" 'ecb-maximize-window-directories)
+;;(define-key global-map "\C-c\ 2" 'ecb-maximize-window-sources)
+;;(define-key global-map "\C-c\ 3" 'ecb-maximize-window-methods)
+;;(define-key global-map "\C-c\ 4" 'ecb-maximize-window-history)
+;;
+;;;; 恢复原始窗口布局
+;;(define-key global-map "\C-c`" 'ecb-restore-default-window-sizes)
+;;
 
 ;; desc: toggle-fullscreen
 ;; deps: ~/.emacs.d/init-utils.el

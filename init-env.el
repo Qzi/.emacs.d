@@ -77,11 +77,11 @@
 ;; ecb 
 ;; -----
 ;; deps: ecb snapshot for emacs 2.4.2
-(require 'ecb) ;; emacs 24.2 need ecb snapshot
+;;(require 'ecb) ;; emacs 24.2 need ecb snapshot
 ;;(setq ecb-auto-activate t)    
-(setq ecb-tip-of-the-day nil)
-(setq stack-trace-on-error nil)
-(setq ecb-options-version "2.40")
+;;(setq ecb-tip-of-the-day nil)
+;;(setq stack-trace-on-error nil)
+;;(setq ecb-options-version "2.40")
 
 
 ;;括号匹配
@@ -104,6 +104,17 @@
 ;; shell
 (defalias 'emacs 'find-file)
 (defalias 'emacso 'find-file-other-window)
+
+
+;; abbrev
+(abbrev-mode t)
+(setq abbrev-file-name             ;; tell emacs where to read abbrev
+        "~/.emacs.d/abbrev_defs")    ;; definitions from...
+(setq save-abbrevs t)              ;; save abbrevs when files are saved
+;; reads the abbreviations file on startup
+;Avoid errors if the abbrev-file is missing
+(if (file-exists-p abbrev-file-name)
+        (quietly-read-abbrev-file))
 
 
 (provide 'init-env)

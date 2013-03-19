@@ -9,3 +9,4 @@ semanticdb/*
 elpa/archives/*
 eshell/
 .DS_Store
+elpa/archives/

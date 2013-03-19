@@ -14,44 +14,44 @@
 	))
 (yas-global-mode 1)
 
-;;;; default TAB key is occupied by auto-complete
-;;(global-set-key (kbd "C-c ; u") 'yas/expand)
-;;;; default hotkey `C-c & C-s` is still valid
-;;(global-set-key (kbd "C-c ; s") 'yas/insert-snippet)
-;;;; give yas/dropdown-prompt in yas/prompt-functions a chance
-;;(require 'dropdown-list)
-;;;; use yas/completing-prompt when ONLY when `M-x yas/insert-snippet'
-;;;; thanks to capitaomorte for providing the trick.
-;;(defadvice yas/insert-snippet (around use-completing-prompt activate)
-;;  "Use `yas/completing-prompt' for `yas/prompt-functions' but only here..."
-;;     (let ((yas/prompt-functions '(yas/completing-prompt)))
-;;       ad-do-it))  
-;; 
-;;;;;;; use popup menu for yas-choose-value
-;;(require 'popup)
-;;;; add some shotcuts in popup menu mode
-;;(define-key popup-menu-keymap (kbd "M-n") 'popup-next)
-;;(define-key popup-menu-keymap (kbd "TAB") 'popup-next)
-;;(define-key popup-menu-keymap (kbd "<tab>") 'popup-next)
-;;(define-key popup-menu-keymap (kbd "<backtab>") 'popup-previous)
-;;(define-key popup-menu-keymap (kbd "M-p") 'popup-previous)
-;; 
-;;(defun yas-popup-isearch-prompt (prompt choices &optional display-fn)
-;;  (when (featurep 'popup)
-;;    (popup-menu*
-;;     (mapcar
-;;      (lambda (choice)
-;; 	(popup-make-item
-;; 	 (or (and display-fn (funcall display-fn choice))
-;; 	     choice)
-;; 	 :value choice))
-;;      choices)
-;;     :prompt prompt
-;;     ;; start isearch mode immediately
-;;     :isearch t
-;;     )))
-;; 
-;;(setq yas-prompt-functions '(yas-popup-isearch-prompt yas-ido-prompt yas-no-prompt))
+;; default TAB key is occupied by auto-complete
+(global-set-key (kbd "C-c ; u") 'yas/expand)
+;; default hotkey `C-c & C-s` is still valid
+(global-set-key (kbd "C-c ; s") 'yas/insert-snippet)
+;; give yas/dropdown-prompt in yas/prompt-functions a chance
+(require 'dropdown-list)
+;; use yas/completing-prompt when ONLY when `M-x yas/insert-snippet'
+;; thanks to capitaomorte for providing the trick.
+(defadvice yas/insert-snippet (around use-completing-prompt activate)
+  "Use `yas/completing-prompt' for `yas/prompt-functions' but only here..."
+     (let ((yas/prompt-functions '(yas/completing-prompt)))
+       ad-do-it))  
+ 
+;;;;; use popup menu for yas-choose-value
+(require 'popup)
+;; add some shotcuts in popup menu mode
+(define-key popup-menu-keymap (kbd "M-n") 'popup-next)
+(define-key popup-menu-keymap (kbd "TAB") 'popup-next)
+(define-key popup-menu-keymap (kbd "<tab>") 'popup-next)
+(define-key popup-menu-keymap (kbd "<backtab>") 'popup-previous)
+(define-key popup-menu-keymap (kbd "M-p") 'popup-previous)
+ 
+(defun yas-popup-isearch-prompt (prompt choices &optional display-fn)
+  (when (featurep 'popup)
+    (popup-menu*
+     (mapcar
+      (lambda (choice)
+	(popup-make-item
+	 (or (and display-fn (funcall display-fn choice))
+	     choice)
+	 :value choice))
+      choices)
+     :prompt prompt
+     ;; start isearch mode immediately
+     :isearch t
+     )))
+ 
+(setq yas-prompt-functions '(yas-popup-isearch-prompt yas-ido-prompt yas-no-prompt))
 
 
 ;; auto complete
@@ -108,12 +108,6 @@
 (set-face-background 'ac-candidate-face "#eeaa11")
 (set-face-underline 'ac-candidate-face "#666666")
 (set-face-background 'ac-selection-face "#ff3300")
-
-
-;; clang && llvm
- 
-(set-face-background 'popup-face "#ff3355")
-
 
 
 (provide 'init-yas-ac)

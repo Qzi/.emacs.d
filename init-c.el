@@ -177,18 +177,13 @@
 ;; clang && llvm
 (require 'auto-complete-clang)
 ;;(setq ac-clang-auto-save t)
-;;(setq ac-clang-lang-option-function t)
+
 (defun my-ac-clang-config ()
   (setq ac-clang-flags
 	(mapcar(lambda (item)(concat "-I" item))
 	       user-include-dirs))
   )
-;; (setq-default ac-sources '(ac-source-abbrev ac-source-dictionary ac-source-words-in-same-mode-buffers))
 
-;; (add-hook 'c-mode-common-hook 'ac-cc-mode-setup)
-;; (add-hook 'ruby-mode-hook 'ac-ruby-mode-setup)
-;;  (add-hook 'auto-complete-mode-hook 'ac-common-setup)
-;;  (global-auto-complete-mode t))
 (defun my-ac-clang-mode-setup ()
   (make-local-variable 'ac-auto-start)
   (setq ac-auto-start nil)              ;auto complete using clang is CPU sensitive  
@@ -196,17 +191,15 @@
   ;;(setq-default ac-sources '(ac-source-clang ac-source-yasnippet))
 )
 
-;;(add-hook 'c-mode-common-hook 'my-ac-clang-mode-setup)
-(add-hook 'c++-mode-hook 'my-ac-clang-mode-setup)
-(add-hook 'c-mode-hook 'my-ac-clang-mode-setup)
+(add-hook 'c-mode-common-hook 'my-ac-clang-mode-setup)
+;;(add-hook 'c++-mode-hook 'my-ac-clang-mode-setup)
+;;(add-hook 'c-mode-hook 'my-ac-clang-mode-setup)
 (my-ac-clang-config)
 
-;; face
-
+;; ac-clang-face
 (set-face-background 'ac-clang-selection-face "red")
 (set-face-background 'ac-clang-candidate-face "#eeeeee")
 (set-face-underline 'ac-clang-candidate-face "#999999")
-
 
 
 (provide 'init-c)

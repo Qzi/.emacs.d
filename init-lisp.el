@@ -5,6 +5,15 @@
 ;; elisp
 ;; ======
 ;;
+;; emacs-lisp-mode
+(defun my-ac-emacs-lisp-mode-setup ()
+  (setq ac-sources (append '(ac-source-emacs-lisp-features) ac-sources)))
+(add-hook 'emacs-lisp-mode-hook 'my-ac-emacs-lisp-mode-setup)
+
+;; lisp-interaction-mode
+(defun my-ac-lisp-interaction-mode-setup ()
+  (setq ac-sources (append '(ac-source-emacs-lisp-features) ac-sources)))
+(add-hook 'lisp-interaction-mode-hook 'my-ac-lisp-interaction-mode-setup)
 
 
 ;; Scheme

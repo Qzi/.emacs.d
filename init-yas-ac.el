@@ -63,25 +63,25 @@
 (global-auto-complete-mode t)
 (global-set-key (kbd "M-[") 'auto-complete)
 ;; 设置自动提示的资料来源
-;;(setq-default ac-sources 
-;; 	      '(ac-source-yasnippet ;; need yasnippet, 不兼容了现在
-;; 		ac-source-filename
-;;;;		ac-source-words-in-all-buffer
-;; 		ac-source-functions
-;; 		ac-source-variables
-;; 		ac-source-symbols
-;;;;		ac-source-semantic
-;;;;		ac-source-imenu
-;;;;		ac-source-entity
-;;;;		ac-source-clang
-;;;;		ac-source-semantic-raw
-;;;;		ac-source-gtags
-;; 		ac-source-abbrev
-;; 		ac-source-words-in-same-mode-buffers
-;; 		ac-source-dictionary
-;;;;		  ac-source-css-property
-;;;;		  ac-source-emacs-lisp-features
-;; 		ac-source-files-in-current-dir))
+(setq-default ac-sources 
+	      '(ac-source-yasnippet ;; need yasnippet, 不兼容了现在
+		ac-source-filename
+;;		ac-source-words-in-all-buffer
+		ac-source-functions
+		ac-source-variables
+		ac-source-symbols
+;;		ac-source-semantic
+;;		ac-source-imenu
+;;		ac-source-entity
+;;		ac-source-clang
+;;		ac-source-semantic-raw
+;;		ac-source-gtags
+		ac-source-abbrev
+		ac-source-words-in-same-mode-buffers
+		ac-source-dictionary
+;;		  ac-source-css-property
+;;		  ac-source-emacs-lisp-features
+		ac-source-files-in-current-dir))
 ;; 
 ;; desc: ac-popup-tip-helper 
 ;; path: ~/.emacs.d/plugins/ac-pos-tip

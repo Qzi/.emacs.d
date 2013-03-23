@@ -5,8 +5,8 @@ ac-comphist.dat
 plugins/yasnippet/extras/
 semanticdb/
 .session
-semanticdb/*
 elpa/archives/*
 eshell/
 .DS_Store
 elpa/archives/
+bookmarks

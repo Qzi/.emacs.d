@@ -1,8 +1,8 @@
 .emacs.d
----------
+==========
 
 我学习emacs的备份，才刚开始，慢慢来吧 ...   
-自定义的部分能用英文注释就尽量用英文，不能就用中文了 ...   
+自定义的部分能用英文注释就尽量用英文，不能或者赶时间就用中文了 ...   
 
 个人配置模块说明
 ---------------
@@ -47,13 +47,15 @@ ctags
 
 *********************************************************************************
 
+一些基本的查询方法
+-------------------
 - `M-x help-with-tutorial-spec-language <RET>` 指定教程语言
 - `C-h f` 查看已经装载函数
-- `C-h v` 查看已经转载的变量
+- `C-h v` 查看已经转载的变量(包括默认值和现有值)
 - `C-h k` 查看快捷键对应的功能  
 - `M-x lisp-interaction-mode` 下可以查看现有的默认设置，例如 `global-font-lock-mode` 然后 `C-j` 可以查看其值  
 
-###加载插件文件夹
+##加载插件文件夹
 >(add-to-list 'load-path "~/.emacs.d/elpa/zencoding-mode-0.5.1")
 
 ###快捷键绑定
@@ -67,11 +69,11 @@ b. 如果自定义的快捷键与系统中默认的快捷键冲突，则系统�
 3. (local-set-key "keystroke" 'command-name)：只能将按键绑定到局部映射图中。每种编辑模式都对应了一张局部映射图。
 4. keystroke字符串中，必须使用\C来代表字符Ctrl，\M来代表字符Alt
 
-### 变量设置
+## 变量设置
 (setq auto-save-interval 800)
 
 
-### 数据类型
+## 数据类型
 - t：true
 - nil：false
 - 字符：以?开头。例如：?x代表字符xS     
@@ -86,12 +88,12 @@ require：该函数检测在当前emacs会话中是否加载了指定的插件�
 (require 'zencoding-mode)     
 
 
-### emacs compile
+## emacs compile
 `emacs -batch -f batch-byte-compile powerline.el` 编译成.elc  
 
-## 实用mode备注
+# 实用mode备注
 
-### cua-mode
+## cua-mode
 `(cua-mode t)` 加载mode  
 `cua-set-rectangle-mark` 开启标记  
 标记后`M-b`用空白替换rectangle  
@@ -99,7 +101,7 @@ require：该函数检测在当前emacs会话中是否加载了指定的插件�
 `M-s` 把rect中的每一行替换为一个字符串  
 `C-d` 删除rect
 
-### abbrev-mode
+## abbrev-mode
 `abbrev-mode` 进行启动  
 `C-x a g` 添加全局缩略词，相当于`add-global-abbrev`
 `C-x a l` 添加mode相关的缩略词，相当于`add-mode-abbrev`

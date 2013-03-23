@@ -91,9 +91,10 @@ require：该函数检测在当前emacs会话中是否加载了指定的插件�
 ## emacs compile
 `emacs -batch -f batch-byte-compile powerline.el` 编译成.elc  
 
-# 实用mode备注
+实用mode备注
+--------------
 
-## cua-mode
+### cua-mode
 `(cua-mode t)` 加载mode  
 `cua-set-rectangle-mark` 开启标记  
 标记后`M-b`用空白替换rectangle  
@@ -101,7 +102,7 @@ require：该函数检测在当前emacs会话中是否加载了指定的插件�
 `M-s` 把rect中的每一行替换为一个字符串  
 `C-d` 删除rect
 
-## abbrev-mode
+### abbrev-mode
 `abbrev-mode` 进行启动  
 `C-x a g` 添加全局缩略词，相当于`add-global-abbrev`
 `C-x a l` 添加mode相关的缩略词，相当于`add-mode-abbrev`

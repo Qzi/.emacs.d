@@ -47,6 +47,9 @@
 ;; js-commit
 (add-to-list 'load-path "~/.emacs.d/elpa/js-comint-0.0.1")
 
+;; exec location
+(push "/usr/local/bin" exec-path)
+
 
 (provide 'init-repo)
 

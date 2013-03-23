@@ -15,12 +15,12 @@
 
 emacs for web‘s jobs
 --------------------
-TAB
-`(setq-default indent-tabs-mode  nil)` ;; 关闭默认的缩进设置
-`M-x tabify` 将所有超过两个的连接空格使用TAB替换掉
-`M-x untabify` 将所有TAB使用适当个数的空格替换掉
+TAB  
+`(setq-default indent-tabs-mode  nil)` ;; 关闭默认的缩进设置  
+`M-x tabify` 将所有超过两个的连接空格使用TAB替换掉  
+`M-x untabify` 将所有TAB使用适当个数的空格替换掉  
 
-显示空白
+显示空白  
 `M-x whitespace-mode` 显式地查看空白  
 
 

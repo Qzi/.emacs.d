@@ -44,6 +44,9 @@
 ;; clang
 (add-to-list 'load-path "~/.emacs.d/plugins/auto-complete-clang/")
 
+;; js-commit
+(add-to-list 'load-path "~/.emacs.d/elpa/js-comint-0.0.1")
+
 
 (provide 'init-repo)
 

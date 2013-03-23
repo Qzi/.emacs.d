@@ -34,7 +34,7 @@ Some Editing Skill
 
 代码浏览
 -------
-ecb
+ecb  
 调整窗口大小，然后调用`M-x ecb-store-window-sizes`来保存设置
 其他的参见init里面的配置  
 

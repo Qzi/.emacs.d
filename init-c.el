@@ -44,15 +44,16 @@
   (list ".." "../include" "../inc" "../common" "../public" "."
         "../.." "../../include" "../../inc" "../../common" "../../public"))
 
-(setq cedet-sys-include-dirs (list
-			      "./"
-			      "/usr/llvm-gcc-4.2/bin/../lib/gcc/i686-apple-darwin11/4.2.1/include"
-			      "/usr/include/c++/4.2.1"
-			      "/usr/include/c++/4.2.1/backward"
-			      "/usr/local/include"
-			      "/Applications/Xcode.app/Contents/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin11/4.2.1/include"
-			      "/usr/include"
-                              "/usr/local/include"))
+(setq cedet-sys-include-dirs 
+      (list
+       "./"
+       "/usr/llvm-gcc-4.2/bin/../lib/gcc/i686-apple-darwin11/4.2.1/include"
+       "/usr/include/c++/4.2.1"
+       "/usr/include/c++/4.2.1/backward"
+       "/usr/local/include"
+       "/Applications/Xcode.app/Contents/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin11/4.2.1/include"
+       "/usr/include"
+       "/usr/local/include"))
 
 (let ((include-dirs cedet-user-include-dirs))
   (setq include-dirs (append include-dirs cedet-sys-include-dirs))
@@ -249,27 +250,27 @@
 
 
 ;; 输入 inc , 可以自动提示输入文件名称,可以自动补全.
-(define-skeleton skeleton-include
-  "generate include""" ""
-  > "#include \""
-  (completing-read "Include File:"
-		   (mapcar #'(lambda (f) (list f ))
-			   (apply 'append
-				  (mapcar
-				   #'(lambda (dir)
-				       (directory-files dir))
-				   (list
-				    "./"
-				    "/usr/llvm-gcc-4.2/bin/../lib/gcc/i686-apple-darwin11/4.2.1/include"
-				    "/usr/include/c++/4.2.1"
-				    "/usr/include/c++/4.2.1/backward"
-				    "/usr/local/include"
-				    "/Applications/Xcode.app/Contents/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin11/4.2.1/include"
-				    "/usr/include"
-				    "/usr/local/include")
-				   ))))
-  "\"")
-
+;;(define-skeleton skeleton-include
+;;  "generate include""" ""
+;;  > "#include \""
+;;  (completing-read "Include File:"
+;;		   (mapcar #'(lambda (f) (list f ))
+;;			   (apply 'append
+;;				  (mapcar
+;;				   #'(lambda (dir)
+;;				       (directory-files dir))
+;;				   (list
+;;				    "./"
+;;				    "/usr/llvm-gcc-4.2/bin/../lib/gcc/i686-apple-darwin11/4.2.1/include"
+;;				    "/usr/include/c++/4.2.1"
+;;				    "/usr/include/c++/4.2.1/backward"
+;;				    "/usr/local/include"
+;;				    "/Applications/Xcode.app/Contents/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin11/4.2.1/include"
+;;				    "/usr/include"
+;;				    "/usr/local/include")
+;;				   ))))
+;;  "\"")
+;;
 
 ;;;; clang && llvm
 ;;;; ---------------
@@ -311,15 +312,17 @@
 ;;;;(add-hook 'c++-mode-hook 'my-ac-clang-mode-setup)
 ;;(add-hook 'js2-mode-hook 'my-ac-clang-mode-setup)
 ;;(my-ac-clang-config)
- 
+;; 
 ;; ac-clang-face
 ;;(set-face-background 'ac-clang-selection-face "red")
 ;;(set-face-background 'ac-clang-candidate-face "#eeeeee")
 ;;(set-face-underline 'ac-clang-candidate-face "#999999")
 ;;
+
+
+
 ;; c style setting
 (defun my-c-code-hook()
-
   ;; 将回车代替C-j的功能，换行的同时对齐 
   ;;(define-key c-mode-map [return] 'newline-and-indent) 
   (interactive) 

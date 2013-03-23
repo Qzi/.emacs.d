@@ -54,7 +54,7 @@ ctags
 
 加载插件文件夹
 --------------
->(add-to-list 'load-path "~/.emacs.d/elpa/zencoding-mode-0.5.1")
+`(add-to-list 'load-path "~/.emacs.d/elpa/zencoding-mode-0.5.1")`
 
 
 快捷键绑定

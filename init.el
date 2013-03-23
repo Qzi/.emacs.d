@@ -12,7 +12,7 @@
 (require 'init-env)
 (require 'init-ui)
 (require 'init-utils)
-(require 'init-yas-ac)
+(require 'init-yas-ac) ;; 要放在大部分语言设置之前，因为有些有添加ac-sources...etc.
 (require 'init-lisp)
 (require 'init-html)
 (require 'init-css)
@@ -56,4 +56,6 @@
 ;;(require 'helm-config)
 ;;(helm-mode 1)
 ;;(global-set-key (kbd "C-c h") 'helm-mini)
+
+
 

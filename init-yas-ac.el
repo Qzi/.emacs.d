@@ -51,7 +51,8 @@
      :isearch t
      )))
  
-(setq yas-prompt-functions '(yas-popup-isearch-prompt yas-ido-prompt yas-no-prompt))
+(setq yas-prompt-functions '(yas-popup-isearch-prompt
+yas-ido-prompt yas-no-prompt))
 
 
 ;; auto complete
@@ -60,8 +61,8 @@
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-1.4/dict")
 (ac-config-default)
-(global-auto-complete-mode t)
-(global-set-key (kbd "M-[") 'auto-complete)
+
+
 ;; 设置自动提示的资料来源
 (setq-default ac-sources 
 	      '(ac-source-yasnippet ;; need yasnippet, 不兼容了现在
@@ -91,10 +92,12 @@
 ;; 设置函数提示
 (setq ac-use-quick-help t)
 (setq ac-quick-help-delay 0.5)
- 
+
+
+(global-auto-complete-mode t) 
 ;; 关闭ac自动启动，并设置促发的按键
-(setq ac-auto-start t)
-;;(ac-set-trigger-key "<f1>")
+(setq ac-auto-start nil)
+(ac-set-trigger-key "<f1>")
 (define-key ac-mode-map  (kbd "M-/") 'auto-complete) 
  
 ;; backspace 也激活

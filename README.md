@@ -38,10 +38,10 @@ ecb
 调整窗口大小，然后调用`M-x ecb-store-window-sizes`来保存设置
 其他的参见init里面的配置  
 
-ctags
-`find $SRH_PATH -name "*.js" | xargs ctags --language-force=javascript -f TAGS -e;`
+ctags  
+`find $SRH_PATH -name "*.js" | xargs ctags --language-force=javascript -f TAGS -e;`  
 生成我给emacs用的tags(-e)   
-`M-.` 进行tags跳转
+`M-.` 进行tags跳转  
 
 
 一些基本的查询方法
@@ -51,6 +51,7 @@ ctags
 - `C-h v` 查看已经转载的变量(包括默认值和现有值)
 - `C-h k` 查看快捷键对应的功能  
 - `M-x lisp-interaction-mode` 下可以查看现有的默认设置，例如 `global-font-lock-mode` 然后 `C-j` 可以查看其值  
+
 
 加载插件文件夹
 --------------
@@ -62,7 +63,7 @@ ctags
 a. 键位映 射图：多个按键绑定构成的一个集合。Emacs中有两类映射图：  
 > (1).全局影射图：对所有模式的编辑缓冲区都起作用的按键映射图   
 > (2).局部映射图：对具体的编辑模式起作用的映射图。例如：c模式、文本模式等。当按下某个按键时，Emacs会首先查看当前编辑缓冲区的局部映射图里 有没有对它进行定义。如果没有，就会查找全局映射图。如果找到了与按键对应的定义项，那么按键关联的命令就会被执行。  
->
+
 b. 如果自定义的快捷键与系统中默认的快捷键冲突，则系统中默认的快捷键将会被替换  
 
 Example:  

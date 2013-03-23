@@ -39,7 +39,7 @@ ecb
 其他的参见init里面的配置  
 
 ctags  
-`find $SRH_PATH -name "*.js" | xargs ctags --language-force=javascript -f TAGS -e;`  
+shell 命令: `find $SRH_PATH -name "*.js" | xargs ctags --language-force=javascript -f TAGS -e;`  
 生成我给emacs用的tags(-e)   
 `M-.` 进行tags跳转  
 
@@ -75,7 +75,7 @@ Example:
 
 变量设置
 --------
-(setq auto-save-interval 800)
+`(setq auto-save-interval 800)`
 
 
 数据类型
@@ -90,15 +90,16 @@ Example:
 常用函数
 ---------
 add-hook：该函数用来将某个函数与指定的模式绑定，当emacs进入相应的模式时，将自动调用与该模式绑定的函数。  
-(add-hook 'sgml-mode-hook 'zencoding-mode)    
+`(add-hook 'sgml-mode-hook 'zencoding-mode)`  
 
 require：该函数检测在当前emacs会话中是否加载了指定的插件，如果没有，则使用load函数来从系统的LISP目录中加载指定的插件。  
-(require 'zencoding-mode)     
+`(require 'zencoding-mode)`     
 
 
 emacs compile
 --------------
-`emacs -batch -f batch-byte-compile powerline.el` 编译成.elc  
+将.el编译成.elc    
+`emacs -batch -f batch-byte-compile powerline.el`   
 
 
 实用mode备注

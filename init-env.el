@@ -32,6 +32,9 @@
 ;; ido-mode
 (ido-mode t)
 
+;; 如果没有将其设置为 nil，那么 Emacs 将使得该框架闪烁，而不是鸣响系统警铃。其缺省值是 nil。
+(setq visible-bell t)
+
 
 ;; Enable CUA selection mode without the C-z/C-x/C-c/C-v bindings.
 (cua-selection-mode t)
@@ -66,7 +69,7 @@
 (require 'sr-speedbar)
 (setq speedbar-show-unknown-files t)
 (setq speedbar-use-images nil)
-(setq sr-speedbar-width 30)
+(setq sr-speedbar-width 25)
 (setq sr-speedbar-right-side t)
 (global-set-key (kbd "<f4>") 
 		(lambda() (interactive)
@@ -115,6 +118,9 @@
 ;Avoid errors if the abbrev-file is missing
 (if (file-exists-p abbrev-file-name)
         (quietly-read-abbrev-file))
+
+;; fill-column
+(setq fill-column 80)
 
 
 (provide 'init-env)

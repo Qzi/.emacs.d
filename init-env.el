@@ -26,19 +26,15 @@
 (setq indent-tabs-mode nil) ;; 关闭默认
 (setq tab-width 4) 
 (default-value 'tab-width)
-;; c自动缩进的宽度设置为4
-(setq c-basic-offset 4)
 
 ;; ido-mode
 (ido-mode t)
 
-;; 如果没有将其设置为 nil，那么 Emacs 将使得该框架闪烁，而不是鸣响系统警铃。其缺省值是 nil。
+;; 如果没有将其设置为 nil，那么 Emacs 将使得该框架闪烁，而不是鸣响系统警铃。
 (setq visible-bell t)
-
 
 ;; Enable CUA selection mode without the C-z/C-x/C-c/C-v bindings.
 (cua-selection-mode t)
-;;(setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
 
 ;; 不生成#filename#
 (setq auto-save-default nil) 
@@ -91,7 +87,8 @@
 (add-hook 'c-mode-hook 'my-common-mode-auto-pair) 
 (add-hook 'c++-mode-hook 'my-common-mode-auto-pair) 
 (add-hook 'lisp-mode-hook 'my-common-mode-auto-pair)
-
+(add-hook 'emacs-lisp-mode 'my-common-mode-auto-pair)
+(add-hook 'lisp-interaction-mode-hook 'my-common-mode-auto-pair)
 
 ;; dired-x
 (add-hook 'dired-load-hook
@@ -120,7 +117,7 @@
         (quietly-read-abbrev-file))
 
 ;; fill-column
-(setq fill-column 80)
+(setq fill-column 70)
 
 
 (provide 'init-env)

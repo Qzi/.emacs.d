@@ -50,6 +50,8 @@ shell 命令: `find $SRH_PATH -name "*.js" | xargs ctags --language-force=javasc
 - `C-h f` 查看已经装载函数
 - `C-h v` 查看已经转载的变量(包括默认值和现有值)
 - `C-h k` 查看快捷键对应的功能  
+- `C-h a` 通过残缺的名字查询到完整的命令和对应的说明  
+- `C-h d` 通过字符串查询到相应的文档  
 - `M-x lisp-interaction-mode` 下可以查看现有的默认设置，例如 `global-font-lock-mode` 然后 `C-j` 可以查看其值  
 
 

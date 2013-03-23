@@ -46,9 +46,9 @@
       (call-interactively 'lisp-indent-line)
       (call-interactively 'slime-indent-and-complete-symbol)))
 
-(eval-after-load "lisp-mode"
-  '(progn
-     (define-key lisp-mode-map (kbd "TAB") 'lisp-indent-or-complete)))
-
+;;(eval-after-load "lisp-mode"
+;;  '(progn
+;;     (define-key lisp-mode-map (kbd "TAB") 'lisp-indent-or-complete)))
+;;
 
 (provide 'init-lisp)

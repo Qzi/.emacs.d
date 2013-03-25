@@ -46,5 +46,7 @@
             ;; Activate the folding mode
             (hs-minor-mode t)))
 
+(require 'nodejs-mode)
+
 
 (provide 'init-js)

@@ -121,3 +121,9 @@ emacs compile
 `C-x a l` 添加mode相关的缩略词，相当于`add-mode-abbrev`
 `M-x edit-abbrevs` 修改缩略词, 可以直接删除table
 
+### auto-fill-mode
+`M-x auto-fill-mode` 默认启动，粘贴文字根据宽度自动换行
+
+### fringe-mode
+`(set-fringe-style 5)`  5 means half-width; 0 means no-fringe; -1
+means minimal.

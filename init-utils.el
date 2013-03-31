@@ -49,6 +49,36 @@
   (local-set-key (kbd "\'") 'skeleton-pair-insert-maybe) 
   (local-set-key (kbd "[") 'skeleton-pair-insert-maybe))
 
+;; js-mode-auto-pair
+(defun my-js-mode-auto-pair () 
+  (interactive) 
+  (make-local-variable 'skeleton-pair-alist) 
+  (setq skeleton-pair-alist '( 
+			      (? ? _ "''")
+			      (? ? _ """")
+			      (? ? _ "()")
+			      (? ? _ "[]")
+			      (?{ \n > _ \n ?} >)))
+  (setq skeleton-pair t)
+  (local-set-key (kbd "(") 'skeleton-pair-insert-maybe) 
+  (local-set-key (kbd "\"") 'skeleton-pair-insert-maybe) 
+;;  (local-set-key (kbd "{") 'skeleton-pair-insert-maybe) 
+  (local-set-key (kbd "\'") 'skeleton-pair-insert-maybe) 
+  (local-set-key (kbd "[") 'skeleton-pair-insert-maybe))
+
+;; lisp-mode-auto-pair
+(defun my-lisp-mode-auto-pair () 
+  (interactive) 
+  (make-local-variable 'skeleton-pair-alist) 
+  (setq skeleton-pair-alist '( 
+			      (? ? _ "''")
+			      (? ? _ """")
+			      (? ? _ "()")
+			      (?{ \n > _ \n ?} >)))
+  (setq skeleton-pair t)
+  (local-set-key (kbd "(") 'skeleton-pair-insert-maybe) 
+  (local-set-key (kbd "\"") 'skeleton-pair-insert-maybe))
+
 
 ;; 用"%"在匹配的括号之间来回跳转
 (defun match-paren (arg)
@@ -57,6 +87,27 @@
   (cond ((looking-at "\\s\(") (forward-list 1) (backward-char 1))
 	((looking-at "\\s\)") (forward-char 1) (backward-list 1))
 	(t (self-insert-command (or arg 1)))))
+
+
+(defun runjs()
+  "run js/执行当前缓冲区的js程序"
+  (interactive)
+  ;;(save-buffer)
+  (let ((filename buffer-file-name)
+	(cmd "")
+	(oldbuf (current-buffer))
+	(end (point-max)))
+    (if filename
+	(save-buffer)
+      (save-excursion
+	(setq filename (concat (getenv "tmp") "/temp.js"))
+	(set-buffer (create-file-buffer filename))
+	(insert-buffer-substring oldbuf 1 end)
+	(write-file filename)
+	(kill-buffer (current-buffer))))
+    (setq cmd (concat "node " filename))  ;; node the run command
+    (message "%s  ..." cmd)
+    (shell-command cmd)))
 
 
 (provide 'init-utils)

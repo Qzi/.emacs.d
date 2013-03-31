@@ -20,6 +20,7 @@
 (require 'init-markdown)
 (require 'init-tex)
 (require 'init-c)  ;; after init-yas-ac
+(require 'init-vcs)
 (require 'init-keymap) ;; keyboard map
 (require 'init-postfix) ;; 放到大多数库的后面
 

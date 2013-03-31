@@ -30,11 +30,20 @@
 ;; ido-mode
 (ido-mode t)
 
+;; fring-mode
+(set-fringe-style -1)
+
+;; linum-mode
+;;(global-linum-mode)
+
 ;; 如果没有将其设置为 nil，那么 Emacs 将使得该框架闪烁，而不是鸣响系统警铃。
 (setq visible-bell t)
 
 ;; Enable CUA selection mode without the C-z/C-x/C-c/C-v bindings.
 (cua-selection-mode t)
+
+;; selection mode
+;;(delete-selection-mode t)
 
 ;; 不生成#filename#
 (setq auto-save-default nil) 
@@ -86,9 +95,11 @@
 ;;括号匹配
 (add-hook 'c-mode-hook 'my-common-mode-auto-pair) 
 (add-hook 'c++-mode-hook 'my-common-mode-auto-pair) 
-(add-hook 'lisp-mode-hook 'my-common-mode-auto-pair)
-(add-hook 'emacs-lisp-mode 'my-common-mode-auto-pair)
-(add-hook 'lisp-interaction-mode-hook 'my-common-mode-auto-pair)
+(add-hook 'lisp-mode-hook 'my-lisp-mode-auto-pair)
+(add-hook 'emacs-lisp-mode 'my-lisp-mode-auto-pair)
+(add-hook 'lisp-interaction-mode-hook 'my-lisp-mode-auto-pair)
+(add-hook 'js2-mode-hook 'my-js-mode-auto-pair)
+
 
 ;; dired-x
 (add-hook 'dired-load-hook
@@ -117,7 +128,7 @@
         (quietly-read-abbrev-file))
 
 ;; fill-column
-(setq fill-column 70)
+(setq fill-column 80)
 
 
 (provide 'init-env)

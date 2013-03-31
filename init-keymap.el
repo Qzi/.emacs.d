@@ -59,4 +59,11 @@
 (global-set-key "%" 'match-paren)
 
 
+;; run js using node.js
+(global-set-key[(meta o)] 'runjs) ;bind-key alt+o:
+
+
+;; flymake for js
+;;(global-set-key [f5] 'flymake-display-err-menu-for-current-line)
+
 (provide 'init-keymap)

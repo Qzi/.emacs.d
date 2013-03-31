@@ -3,29 +3,36 @@
 ;; content: c style
 
 
-;;;;  Helper tools.
-(custom-set-variables
- '(semantic-default-submodes 
-   (quote (
-	   ;; 打开这个mode后，semantic会在类/函数等tag上方加一条蓝色的线，
-	   ;; 源文件很大的时候用它可以提示出哪些是类和函数的头。
-	   global-semantic-decoration-mode 
-	   ;; activates highlighting of local names that are the same as name of tag under cursor;
-	   global-semantic-idle-local-symbol-highlight-mode
-	   global-semantic-idle-completions-mode
-	   global-semantic-idle-scheduler-mode 
-	   global-semanticdb-minor-mode
-	   global-semanticdb-minor-mode
-	   ;;semantic会用灰的底色把光标所在函数名高亮显示
-	   global-semantic-highlight-func-mode
-	   global-semantic-highlight-edits-mode
-	   ;;这个mode会根据光标位置把当前函数名显示在buffer顶上
-	   global-semantic-stickyfunc-mode-hook 
-	   global-semantic-idle-summary-mode
-	   global-semantic-mru-bookmark-mode)))
- '(semantic-idle-scheduler-idle-time 3))
+(add-hook 'c-mode-common-hook 
+	  (lambda()
+	    ;;  Helper tools.
+	    (custom-set-variables
+	     '(semantic-default-submodes 
+	       (quote (
+		       ;; 打开这个mode后，semantic会在类/函数等tag上方加一条蓝色的线，
+		       ;; 源文件很大的时候用它可以提示出哪些是类和函数的头。
+		       global-semantic-decoration-mode 
+		       ;; activates highlighting of local names that are the same as name of tag under cursor;
+		       global-semantic-idle-local-symbol-highlight-mode
+		       global-semantic-idle-completions-mode
+		       global-semantic-show-unmatched-syntax-mode
+		       global-semantic-idle-scheduler-mode 
+		       global-semanticdb-minor-mode
+		       global-semanticdb-minor-mode
+		       ;;semantic会用灰的底色把光标所在函数名高亮显示
+		       global-semantic-highlight-func-mode
+		       global-semantic-highlight-edits-mode
+		       ;;这个mode会根据光标位置把当前函数名显示在buffer顶上
+		       global-semantic-stickyfunc-mode-hook 
+		       global-semantic-idle-summary-mode
+		       global-semantic-mru-bookmark-mode)))
+	     '(semantic-idle-scheduler-idle-time 3))
+	    
+	    ))
 
-(semantic-mode)
+;;(semantic-mode)
+
+(add-hook 'c-mode-common-hook 'semantic-mode)
 
 ;; smart complitions
 (require 'semantic/ia)
@@ -97,11 +104,16 @@
 ;; 需要开启 [global-]semantic-mru-bookmark 开启
 ;; 跳转时添加当前的位置进入semantic-mru-bookmark-ring 
 ;; 通过`C-x B` (semantic-mru-switch-tags) 跳转回去
-(defadvice push-mark (around global-semantic-mru-bookmark activate)
-  (semantic-mrub-push semantic-mru-bookmark-ring
-		      (point)
-		      'mark)
-  ad-do-it)
+(add-hook 'c-mode-common-hook 
+	  (lambda()
+	    (defadvice push-mark (around global-semantic-mru-bookmark activate)
+	      (semantic-mrub-push semantic-mru-bookmark-ring
+				  (point)
+				  'mark)
+	      ad-do-it)))
+
+;;(semantic-speedbar-analysis)
+(add-hook 'speedbar-load-hook (lambda () (require 'semantic/sb)))
 
 
 ;;(require 'cedet)
@@ -322,7 +334,7 @@
 
 
 ;; c style setting
-(defun my-c-code-hook()
+(defun my-c-mode-hook()
   ;; 将回车代替C-j的功能，换行的同时对齐 
   ;;(define-key c-mode-map [return] 'newline-and-indent) 
   (interactive) 

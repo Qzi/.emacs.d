@@ -47,7 +47,7 @@
 ;; js-commit
 (add-to-list 'load-path "~/.emacs.d/elpa/js-comint-0.0.1")
 
-
+;; nodejs-mode
 (add-to-list 'load-path "~/.emacs.d/plugins/nodejs-mode.el")
 
 

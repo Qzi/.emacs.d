@@ -47,7 +47,7 @@
 
 ;; fill-column-indicator
 (require 'fill-column-indicator)
-(setq-default fci-rule-column 70)
+(setq-default fci-rule-column 80)
 (setq fci-handle-truncate-lines nil)
 (define-globalized-minor-mode global-fci-mode 
   fci-mode 

@@ -52,6 +52,10 @@
 
 (add-hook 'js2-mode-hook
           (lambda ()
+	    ;; set indent tabs mode off for jslint
+	    (setq indent-tabs-mode nil)
+	    ;; set tab width
+	    (setq tab-width 2)
             ;; Scan the file for nested code blocks
             (imenu-add-menubar-index)
 	    (set-fringe-style 5)

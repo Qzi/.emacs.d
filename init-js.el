@@ -49,7 +49,8 @@
 	      )
 	    ))
 
-
+;; desc: more magic setting
+;;
 (add-hook 'js2-mode-hook
           (lambda ()
 	    ;; set indent tabs mode off for jslint
@@ -65,12 +66,6 @@
 	    (define-key js2-mode-map [f5] 'flymake-display-err-menu-for-current-line)
             ;; Activate the folding mode
             (hs-minor-mode t)))
-
-
-;; nodejs-mode
-(add-hook 'js2-mode-hook 
-	  (lambda()
-	    (require 'nodejs-mode)))
 
 
 (provide 'init-js)

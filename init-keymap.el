@@ -2,12 +2,13 @@
 ;; email: i@qzier.com
 ;; content: key map
 
-
+(if (eq window-system 'mac)
 ;; mac-keyboard
 (setq mac-command-modifier nil
       mac-option-modifier 'meta
       mac-allow-anti-aliasing t
       mac-command-key-is-meta nil)
+)
 
 
 ;; 行首, 设定mark以及行尾.

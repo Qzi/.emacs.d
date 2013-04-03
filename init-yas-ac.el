@@ -4,15 +4,17 @@
 
 ;; yasnippet
 ;; =========
-(add-to-list 'load-path
-       "~/.emacs.d/plugins/yasnippet")
-(require 'yasnippet)
-(setq yas-snippet-dirs
-      '("~/.emacs.d/plugins/yasnippet/snippets"
-	"~/.emacs.d/plugins/yasnippet/extras/imported"
-	 "~/.emacs.d/plugins/yasnippet/snippets/my-snippets"
-	))
-(yas-global-mode 1)
+(defun my-yasnippet-setup()
+  (interactive)
+  (add-to-list 'load-path
+	       "~/.emacs.d/plugins/yasnippet")
+  (require 'yasnippet)
+  (setq yas-snippet-dirs
+	'("~/.emacs.d/plugins/yasnippet/snippets"
+	  "~/.emacs.d/plugins/yasnippet/extras/imported"
+	  "~/.emacs.d/plugins/yasnippet/snippets/my-snippets"
+	  ))
+  (yas-global-mode 1)
 
 ;; default TAB key is occupied by auto-complete
 (global-set-key (kbd "C-c ; u") 'yas/expand)
@@ -25,7 +27,12 @@
 (defadvice yas/insert-snippet (around use-completing-prompt activate)
   "Use `yas/completing-prompt' for `yas/prompt-functions' but only here..."
      (let ((yas/prompt-functions '(yas/completing-prompt)))
-       ad-do-it))  
+	ad-do-it))  
+)
+
+
+(add-hook 'js2-mode-hook 'my-yasnippet-setup)
+
  
 ;;;;; use popup menu for yas-choose-value
 (require 'popup)

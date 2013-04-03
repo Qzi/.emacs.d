@@ -29,10 +29,11 @@ Some Editing Skill
 `M+\`  删除句子前面的空白，包括tab + spcae (delete-horizontal-space)   
 `M+SPC`  删除光标处的所有空格和Tab字符，但留下一个.(just-one-space)  
 `C-x C-o` 删除光标周围的空白行，保留当前行。(delete-blank-lines)  
-`(setq default-truncate-lines t)` 关闭换行，跟 `M-x toggle-truncate-lines` (临时）
+`(setq default-truncate-lines t)` 关闭换行，跟 `M-x
+toggle-truncate-lines` (临时）  
 `C-M-n` 在js-mode 和 c-mode 等等地方, Move forward across one balanced
-group of parentheses.(forward-list)
-`C-M-p` 跟`C-M-n`相反(backward-list)
+group of parentheses.(forward-list)  
+`C-M-p` 跟`C-M-n`相反(backward-list)  
 
 代码浏览
 -------

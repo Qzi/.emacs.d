@@ -50,8 +50,8 @@
 (setq make-backup-files nil)
 
 ;; 关闭大小写
-(put 'upcase-region 'disabled nil)
-(put 'downcase-region 'disabled nil)
+;;(put 'upcase-region 'disabled nil)
+;;(put 'downcase-region 'disabled nil)
 
 ;; speedbar
 ;(autoload 'speedbar-frame-mode "speedbar" "Popup a speedbar frame" t)

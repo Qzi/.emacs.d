@@ -49,7 +49,8 @@
 
 ;; desc: toggle-fullscreen
 ;; deps: ~/.emacs.d/init-utils.el
-(global-set-key [f12] 'toggle-fullscreen)
+;;(global-set-key [f12] 'toggle-fullscreen)
+(global-set-key [f12] 'toggle-maximized)
 
 
 ;; cua-mode

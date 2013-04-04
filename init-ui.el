@@ -9,7 +9,6 @@
      (set-frame-width nil 100))
 )
 
-
 ;; tool-bar-mode
 (tool-bar-mode 0)
 

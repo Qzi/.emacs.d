@@ -38,8 +38,7 @@
 			     (if (boundp 'old-fullscreen) old-fullscreen nil)
 			   (progn (setq old-fullscreen current-value)
 				  'maximized)))))
-;; key binding
-(global-set-key [f12] 'toggle-maximized)
+
 
 
 ;; 自动补全括号

@@ -6,8 +6,15 @@
 ;; window-system setting
 (if (display-graphic-p)
  (if window-system
-     (set-frame-width nil 100))
-)
+     (progn (set-frame-width nil 100)
+	    (set-frame-parameter nil 'fullscreen 'fullheight)
+	    
+	    ;; alpha
+	    (set-frame-parameter (selected-frame) 'alpha (list 85 50))
+	    (add-to-list 'default-frame-alist (cons 'alpha (list 85 50)))
+	    )
+   )
+ )
 
 ;; tool-bar-mode
 (tool-bar-mode 0)

@@ -44,15 +44,23 @@
 	      
 	      (add-to-list 'flymake-allowed-file-name-masks
 			   '("\\.js\\'" flymake-jslint-init))
+	     
+	      ;; flymake err menu
+	      (define-key js2-mode-map [f5] 'flymake-display-err-menu-for-current-line)
+	      
+	      ;; next-error
+	      (define-key js2-mode-map "\C-c\C-n" 'flymake-goto-next-error)
 
 	      (require 'flymake-cursor)
 	      )
 	    ))
 
 ;; desc: more magic setting
-;;
+;; --------------------------
 (add-hook 'js2-mode-hook
           (lambda ()
+	    ;; newline and indent
+	    (local-set-key [(return)] 'newline-and-indent)
 	    ;; set indent tabs mode off for jslint
 	    (setq indent-tabs-mode nil)
 	    ;; set tab width
@@ -60,10 +68,6 @@
             ;; Scan the file for nested code blocks
             (imenu-add-menubar-index)
 	    (set-fringe-style 5)
-	    ;; next-error
-	    (define-key js2-mode-map "\C-c\C-n" 'flymake-goto-next-error)
-	    ;; flymake err menu
-	    (define-key js2-mode-map [f5] 'flymake-display-err-menu-for-current-line)
             ;; Activate the folding mode
             (hs-minor-mode t)))
 

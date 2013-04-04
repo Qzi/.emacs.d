@@ -16,23 +16,34 @@
 
 ;;(global-set-key (kbd "C-c l") 'copy-lines)
 
-;; fullscreen
-;; ----------------------
-(defun toggle-fullscreen ()
-  "Toggle full screen on mac"
-  (interactive)
-  (when (eq window-system 'mac)
-    (set-frame-parameter
-     nil 'fullscreen
-     (when (not (frame-parameter nil 'fullscreen)) 'fullboth ))))
 
-(global-set-key [f12] 'toggle-fullscreen)
-;;(add-to-list 'initial-frame-alist `(fullscreen . fullheight))
-;;(add-to-list 'default-frame-alist `(fullscreen . fullheight))
-(set-frame-parameter nil 'fullscreen 'fullheight)
+;; fullscreen
+;; -----------
+(defun toggle-fullscreen (&optional f)
+  (interactive)
+  (let ((current-value (frame-parameter nil 'fullscreen)))
+    (set-frame-parameter nil 'fullscreen
+			 (if (equal 'fullboth current-value)
+			     (if (boundp 'old-fullscreen) old-fullscreen nil)
+			   (progn (setq old-fullscreen current-value)
+				  'fullboth)))))
+
+;; maximized
+;; ----------
+(defun toggle-maximized (&optional f)
+  (interactive)
+  (let ((current-value (frame-parameter nil 'fullscreen)))
+    (set-frame-parameter nil 'fullscreen
+			 (if (equal 'maximized current-value)
+			     (if (boundp 'old-fullscreen) old-fullscreen nil)
+			   (progn (setq old-fullscreen current-value)
+				  'maximized)))))
+;; key binding
+(global-set-key [f12] 'toggle-maximized)
 
 
 ;; 自动补全括号
+;; -----------
 (defun my-common-mode-auto-pair () 
   (interactive) 
   (make-local-variable 'skeleton-pair-alist) 

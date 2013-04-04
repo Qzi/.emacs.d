@@ -10,7 +10,7 @@
 	    (set-frame-parameter nil 'fullscreen 'fullheight)
 	    
 	    ;; alpha
-	    (set-frame-parameter (selected-frame) 'alpha (list 85 50))
+	    (set-frame-parameter (selected-frame) 'alpha (list 95 70))
 	    (add-to-list 'default-frame-alist (cons 'alpha (list 85 50)))
 	    )
    )

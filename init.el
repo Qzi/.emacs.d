@@ -25,15 +25,19 @@
 (require 'init-postfix) ;; 放到大多数库的后面
 
 
+
+
 ;;; 下面功能正在验证中  ...
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector ["#2e3436" "#a40000" "#4e9a06" "#c4a000" "#204a87" "#5c3566" "#729fcf" "#eeeeec"])
  '(blink-cursor-mode nil)
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
+ '(custom-enabled-themes (quote (adwaita)))
  '(custom-safe-themes (quote ("21d9280256d9d3cf79cbcf62c3e7f3f243209e6251b215aede5026e0c5ad853f" default)))
  '(debug-on-error t)
  '(default-frame-alist (quote ((nil . fullheight) (vertical-scroll-bars))))
@@ -47,6 +51,10 @@
  '(fringe-mode 0 nil (fringe))
  '(indicate-buffer-boundaries (quote left))
  '(indicate-empty-lines t)
+ '(initial-buffer-choice nil)
+ '(initial-scratch-message nil)
+ '(js2-basic-offset 4)
+ '(js2-mode-show-strict-warnings nil)
  '(overflow-newline-into-fringe t)
  '(save-place t nil (saveplace))
  '(semantic-default-submodes (quote (global-semantic-decoration-mode global-semantic-idle-local-symbol-highlight-mode global-semantic-idle-completions-mode global-semantic-show-unmatched-syntax-mode global-semantic-idle-scheduler-mode global-semanticdb-minor-mode global-semanticdb-minor-mode global-semantic-highlight-func-mode global-semantic-highlight-edits-mode global-semantic-stickyfunc-mode-hook global-semantic-idle-summary-mode global-semantic-mru-bookmark-mode)))
@@ -66,14 +74,3 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
-
-
-;; anything
-;;(add-to-list 'load-path "~/.emacs.d/plugins/helm")
-;;(require 'helm-config)
-;;(helm-mode 1)
-;;(global-set-key (kbd "C-c h") 'helm-mini)
-
-
-

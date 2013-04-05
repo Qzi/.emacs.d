@@ -6,13 +6,14 @@
 ;; window-system setting
 (if (display-graphic-p)
  (if window-system
-     (progn (set-frame-width nil 100)
-	    (set-frame-parameter nil 'fullscreen 'fullheight)
-	    
-	    ;; alpha
-	    (set-frame-parameter (selected-frame) 'alpha (list 95 70))
-	    (add-to-list 'default-frame-alist (cons 'alpha (list 85 50)))
-	    )
+     (progn 
+       (set-frame-width nil 100)
+       (set-frame-parameter nil 'fullscreen 'fullheight)
+       
+       ;; alpha: (list active fade)
+       (set-frame-parameter (selected-frame) 'alpha (list 95 70))
+;;     (add-to-list 'default-frame-alist (cons 'alpha (list 20 10)))
+       )
    )
  )
 

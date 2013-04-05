@@ -40,7 +40,6 @@
 				  'maximized)))))
 
 
-
 ;; 自动补全括号
 ;; -----------
 (defun my-common-mode-auto-pair () 

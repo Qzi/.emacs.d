@@ -131,7 +131,7 @@ emacs compile
 `(set-fringe-style 5)`  5 means half-width; 0 means no-fringe; -1
 means minimal.
 
-## table-insert
+### table-insert
 `M-x table-insert` 可以在各种major mode下插入表格  
 `Tab` next cell  
 `Shift Tab` previous cell  
@@ -148,3 +148,13 @@ means minimal.
 |     |     |     |
 +-----+-----+-----+
 
+### ediff
+#### for git
+> [difftool "ediff"]
+> cmd = emacs --eval \"(ediff-files \\\"$LOCAL\\\" \\\"$REMOTE\\\")\"
+添加配置到.git/config  
+
+`git difftool --tool=ediff filename` 进行对比  
+`Shift + \` 切换水平分割或者垂直分割  
+`(setq ediff-split-window-function 'split-window-horizontally)` 设置默
+认垂直分割

@@ -11,3 +11,4 @@ eshell/
 elpa/archives/
 bookmarks
 \#*
+\.emacs.deskto*

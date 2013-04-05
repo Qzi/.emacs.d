@@ -7,7 +7,9 @@
 (setq user-mail-address "i@qzier.com")
 
 ;; encoding
-(set-language-environment "utf-8")
+(set-language-environment 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
 
 ;; explicit font highlight setting
 (global-font-lock-mode t)
@@ -32,9 +34,6 @@
 
 ;; fring-mode
 (set-fringe-style -1)
-
-;; linum-mode
-;;(global-linum-mode)
 
 ;; 如果没有将其设置为 nil，那么 Emacs 将使得该框架闪烁，而不是鸣响系统警铃。
 (setq visible-bell t)
@@ -118,6 +117,7 @@
 
 
 ;; abbrev
+;; -------
 (abbrev-mode t)
 (setq abbrev-file-name             ;; tell emacs where to read abbrev
         "~/.emacs.d/abbrev_defs")    ;; definitions from...
@@ -127,8 +127,23 @@
 (if (file-exists-p abbrev-file-name)
         (quietly-read-abbrev-file))
 
+
 ;; fill-column
+;; ------------
 (setq fill-column 80)
+
+
+;; modename: desctop
+;; desc:  退出保存打开文件和buffer
+;; ----------------
+(load "desktop") 
+(desktop-load-default)
+(desktop-read)
+(desktop-save-mode 1)
+(setq desktop-restore-eager 2)
+(setq desktop-path '("~/.emacs.d/"))
+(setq desktop-dirname "~/.emacs.d/")
+(setq desktop-base-file-name ".emacs.desktop")
 
 
 (provide 'init-env)

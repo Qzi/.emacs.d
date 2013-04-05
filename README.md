@@ -130,3 +130,21 @@ emacs compile
 ### fringe-mode
 `(set-fringe-style 5)`  5 means half-width; 0 means no-fringe; -1
 means minimal.
+
+## table-insert
+`M-x table-insert` 可以在各种major mode下插入表格  
+`Tab` next cell  
+`Shift Tab` previous cell  
+`C-c C-c {` 调用(table-heighten-cell) 加高cell  
+`C-c C-c }` 调用(table-shorten-cell) 减少高度  
+`C-c C-c >` 调用(table-widen-cell) 加宽cell  
+`C-c C-c <` On the contrary of above  
+
++-----+-----+-----+
+|     |     |     |
++-----+-----+-----+
+|     |     |     |
++-----+-----+-----+
+|     |     |     |
++-----+-----+-----+
+

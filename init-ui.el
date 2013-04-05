@@ -11,7 +11,7 @@
        (set-frame-parameter nil 'fullscreen 'fullheight)
        
        ;; alpha: (list active fade)
-       (set-frame-parameter (selected-frame) 'alpha (list 95 70))
+       (set-frame-parameter (selected-frame) 'alpha (list 97 95))
 ;;     (add-to-list 'default-frame-alist (cons 'alpha (list 20 10)))
        )
    )

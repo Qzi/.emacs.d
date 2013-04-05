@@ -137,9 +137,9 @@
 ;; desc:  退出保存打开文件和buffer
 ;; ----------------
 (load "desktop") 
-(desktop-load-default)
-(desktop-read)
-(desktop-save-mode 1)
+;;(desktop-load-default)
+;;(desktop-read)
+;;(desktop-save-mode 1)
 (setq desktop-restore-eager 2)
 (setq desktop-path '("~/.emacs.d/"))
 (setq desktop-dirname "~/.emacs.d/")

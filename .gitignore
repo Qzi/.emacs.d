@@ -12,3 +12,4 @@ elpa/archives/
 bookmarks
 \#*
 \.emacs.deskto*
+\.session

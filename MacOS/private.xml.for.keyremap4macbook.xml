@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+    <name>change caps lock to Control</name>
+    <identifier>private.change_caps_lock_to_control</identifier>
+    <autogen>__KeyToKey__ KeyCode::CAPSLOCK, KeyCode::CONTROL_L</autogen>
+  </item>
+
+  <item>
+    <name> Fn + Tab to Caps Lock </name>
+    <identifier>private.change_fn_tab_to_caps_lock</identifier>
+    <autogen>
+      __KeyToKey__ 
+      KeyCode::TAB, ModifierFlag::FN, 
+      KeyCode::CAPSLOCK
+    </autogen>
+  </item>
+
+  <item>
+    <name> Fn + Quote to Arrow Right </name>
+    <identifier>private.fn_right</identifier>
+    <autogen>
+      __KeyToKey__ 
+      KeyCode::QUOTE, ModifierFlag::FN, 
+      KeyCode::CURSOR_RIGHT
+    </autogen>
+  </item>
+
+  <item>
+    <name> Fn + Bracket to Arraw Up </name>
+    <identifier>private.fn_up</identifier>
+    <autogen>
+      __KeyToKey__ 
+      KeyCode::BRACKET_LEFT, ModifierFlag::FN, 
+      KeyCode::CURSOR_UP
+    </autogen>
+  </item>
+
+  <item>
+    <name> Fn + Slash to Arraw Down</name>
+    <identifier>private.fn_down</identifier>
+    <autogen>
+      __KeyToKey__ 
+      KeyCode::SLASH, ModifierFlag::FN, 
+      KeyCode::CURSOR_DOWN
+    </autogen>
+  </item>
+
+  <item>
+    <name> Fn + Semicolon to Arrow Left</name>
+    <identifier>private.fn_left</identifier>
+    <autogen>
+      __KeyToKey__ 
+      KeyCode::SEMICOLON, ModifierFlag::FN, 
+      KeyCode::CURSOR_LEFT
+    </autogen>
+  </item>
+
+
+</root>

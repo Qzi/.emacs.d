@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\*\shell\Emacs]
+
+[HKEY_CLASSES_ROOT\*\shell\Emacs\command]
+@="\"D:\\Portable\\emacs\\emacs-24.3\\bin\\runemacs.exe\" \"%1\""

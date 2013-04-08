@@ -1,0 +1,38 @@
+{
+	"empty_request_body":{
+		"err_code":"1000",
+		"err_msg":"empty parameters"
+	},
+	"add_new_users_error":{
+		"err_code":"1001",
+		"err_msg":"add new users error"
+	},
+	"update_rights_error":{
+		"err_code":"1002",
+		"err_msg":"update rights error"
+	},
+	"delete_rights_error":{
+		"err_code":"1003",
+		"err_msg":"delete rights error"
+	},
+	"update_member_type_error":{
+		"err_code":"1004",
+		"err_msg":"update member type error"
+	},
+	"delete_member_type_error":{
+		"err_code":"1005",
+		"err_msg":"delete member type error"
+	},
+	"update_bonus_point_error":{
+		"err_code":"1006",
+		"err_msg":"update bonus point error"
+	},
+	"dict_sync_error":{
+		"err_code":"1007",
+		"err_msg":"dictionary sync error"
+	},
+	"update_users_error":{
+		"err_code":"1008",
+		"err_msg":"update users info error"
+	}
+}

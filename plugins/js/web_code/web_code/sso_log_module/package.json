@@ -1,0 +1,25 @@
+{
+    "name"                : "sso_log_module",
+    "description"         : "记录用户登陆日志",
+    "version"             : "0.0.1",
+    "author"              : "hanqingnan <qingnan.han@upchina.com>",
+    "main"                : "./index.js",
+    "scripts"             : {
+        "start"           : "node ./index.js"
+    },
+    "dependencies"        : {
+        "winston"         : "0.6.2",
+        "generic-pool"    : "2.0.3",
+        "amqp"            : "0.1.4",
+        "mysql"           : "2.0.0-alpha5",
+        "mysql-queues"    : "0.3.5",
+        "underscore"      : "1.4.3",
+        "superagent"      : "0.12.4",
+        "moment"          : "1.7.2",
+        "async"           : "0.2.6"
+    },
+    "devDependencies"     : {
+        "mocha"           : "*",
+        "should"          : "*"
+    }
+}

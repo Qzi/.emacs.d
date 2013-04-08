@@ -1,0 +1,30 @@
+{
+	"empty_parameters": {
+		"err_code": "2000",
+		"err_msg": "empty parameters: "
+	},
+	"invalid_client_id": {
+		"err_code": "2001",
+		"err_msg": "clientId invalid: "
+	},
+	"invalid_sign": {
+		"err_code": "2002",
+		"err_msg": "sign invalid: "
+	},
+	"invalid_params_data": {
+		"err_code": "2003",
+		"err_msg": "params data invalid: "
+	},
+	"decipher_failed": {
+		"err_code": "2004",
+		"err_msg": "decipher failed: "
+	},
+	"hmacmd5_failed": {
+		"err_code": "2005",
+		"err_msg": "hmacmd5 failed: "
+	},
+	"json_syntax_error": {
+		"err_code": "9000",
+		"err_msg": "json syntax error: "
+	}
+}

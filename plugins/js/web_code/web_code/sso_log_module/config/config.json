@@ -1,0 +1,138 @@
+{
+    "auto"                 : "test",
+    "rabbitmq_test"        : {
+        "server_option"    : {
+            "host"         : "192.168.240.222",
+            "port"         : 5672,
+            "login"        : "ssoSender",
+            "password"     : "Uu5jUSwQZM1UZAaq",
+            "vhost"        : "/UPSSO",
+            "heartbeat"    : 600
+        },
+        "logExchangeName"  : "sso.topic",
+        "logQueueName"     : "ssoLog",
+        "client_option"    : {
+            "host"         : "192.168.240.222",
+            "port"         : 5672,
+            "login"        : "ssoSubscriber-log",
+            "password"     : "gb95m8PffOd7",
+            "vhost"        : "/UPSSO",
+            "heartbeat"    : 600
+        }
+    },
+    "rabbitmq_bj"          : {
+        "server_option"    : {
+            "host"         : "192.168.240.117",
+            "port"         : 5672,
+            "login"        : "ssoSender",
+            "password"     : "Uu5jUSwQZM1UZAaq",
+            "vhost"        : "/UPSSO",
+            "heartbeat"    : 600
+        },
+        "logExchangeName"  : "sso.topic",
+        "logQueueName"     : "ssoLog",
+        "client_option"    : {
+            "host"         : "192.168.240.117",
+            "port"         : 5672,
+            "login"        : "ssoSubscriber-log",
+            "password"     : "gb95m8PffOd7",
+            "vhost"        : "/UPSSO",
+            "heartbeat"    : 600
+        }
+    },
+    "rabbitmq_gd"          : {
+        "server_option"    : {
+            "host"         : "192.168.242.230",
+            "port"         : 5672,
+            "login"        : "ssoSender",
+            "password"     : "Uu5jUSwQZM1UZAaq",
+            "vhost"        : "/UPSSO",
+            "heartbeat"    : 600
+        },
+        "logExchangeName"  : "sso.topic",
+        "logQueueName"     : "ssoLog",
+        "client_option"    : {
+            "host"         : "192.168.242.230",
+            "port"         : 5672,
+            "login"        : "ssoSubscriber-log",
+            "password"     : "gb95m8PffOd7",
+            "vhost"        : "/UPSSO",
+            "heartbeat"    : 600
+        }
+    },
+    "up_sso_log_db_for_mysql_test"          :     {
+        "mysql_option"                      :     {
+            "host"                          :     "192.168.240.206",
+            "port"                          :     "3306",
+            "user"                          :     "UP_Hanqingnan",
+            "password"                      :     "9CB3L7UFRwpU",
+            "database"                      :     "SSO",
+            "charset"                       :     "utf8"
+        },
+        "poolMax"                           :     5,
+        "poolMin"                           :     1,
+        "poolTimeOutMillis"                 :     300000,
+        "poolLog"                           :     false
+    },
+    "up_sso_log_db_for_mysql_bj"            :     {
+        "mysql_option"                      :     {
+            "host"                          :     "192.168.240.122",
+            "port"                          :     "3309",
+            "user"                          :     "SSO_renzheng_W",
+            "password"                      :     "FBbNcw40jdcv",
+            "database"                      :     "SSO",
+            "charset"                       :     "utf8"
+        },
+        "poolMax"                           :     50,
+        "poolMin"                           :     16,
+        "poolTimeOutMillis"                 :     300000,
+        "poolLog"                           :     false
+    },
+    "up_sso_log_db_for_mysql_gd"            :     {
+        "mysql_option"                      :     {
+            "host"                          :     "192.168.242.100",
+            "port"                          :     "3309",
+            "user"                          :     "SSO_renzheng_W",
+            "password"                      :     "FBbNcw40jdcv",
+            "database"                      :     "SSO",
+            "charset"                       :     "utf8"
+        },
+        "poolMax"                           :     50,
+        "poolMin"                           :     16,
+        "poolTimeOutMillis"                 :     300000,
+        "poolLog"                           :     false
+    },
+    "UP_SSO_EVENT_WRITE"                    :     "UP_SSO_EVENT_WRITE",
+    "up_sso_log_db_for_mysql_read_bj"       :     {
+        "mysql_option"                      :     {
+            "host"                          :     "192.168.240.100",
+            "port"                          :     "3309",
+            "user"                          :     "SSO_renzheng_R",
+            "password"                      :     "0jaoTaEG8PkQ",
+            "database"                      :     "SSO",
+            "charset"                       :     "utf8"
+        },
+        "poolMax"                           :     5,
+        "poolMin"                           :     1,
+        "poolTimeOutMillis"                 :     300000,
+        "poolLog"                           :     false
+    },
+    "up_sso_log_db_for_mysql_read_gd"       :     {
+        "mysql_option"                      :     {
+            "host"                          :     "192.168.242.101",
+            "port"                          :     "3309",
+            "user"                          :     "SSO_renzheng_R",
+            "password"                      :     "0jaoTaEG8PkQ",
+            "database"                      :     "SSO",
+            "charset"                       :     "utf8"
+        },
+        "poolMax"                           :     5,
+        "poolMin"                           :     1,
+        "poolTimeOutMillis"                 :     300000,
+        "poolLog"                           :     false
+    },
+    "up_sso_log_send_to_crm_url_test"       :     "http://113.105.144.18:806/Handler/User/UserLoginDataSync.ashx",
+    "up_sso_log_send_to_crm_url"            :     "http://113.108.146.108:9999/user/UserLoginDataSync.ashx",
+    "up_sso_log_send_to_crm_refresh_test"   :     300000,
+    "up_sso_log_send_to_crm_refresh"        :     1800000
+}

@@ -1,0 +1,19 @@
+{
+	"name": "up-security",
+	"version": "1.0.0",
+	"author": "Tims Huang <tianshu.huang@upchina.com>",
+	"description": "upchina 常用加解密算法",
+	"private": true,
+	"main": "./index.js",
+	"scripts": {
+		"start": "node up_security.js"
+	},
+	"dependencies": {
+		"underscore":"1.4.3",
+		"winston": "0.6.2"
+	},
+	"devDependencies": {
+		"mocha": "*",
+		"should": "*"
+	}
+}

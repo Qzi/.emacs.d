@@ -1,0 +1,22 @@
+{
+	"mt_dict": [
+		{
+			"mt_id": "1",
+			"mt_name": "Golden Butterfly"
+		},
+		{
+			"mt_id": "2",
+			"mt_name": "Jade Butterfly"
+		}
+	],
+	"bpt_dict": [
+		{
+			"bpt_id": "1",
+			"bpt_name": "Gold"
+		},
+		{
+			"bpt_id": "2",
+			"bpt_name": "Points"
+		}
+	]
+}

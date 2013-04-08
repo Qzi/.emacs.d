@@ -1,0 +1,28 @@
+[
+	{
+		"uid": "temp",
+		"bp": [
+			{
+				"bpt_id": "1",
+				"amount": 4500
+			},
+			{
+				"bpt_id": "2",
+				"amount": 1200
+			}
+		]
+	},
+	{
+		"uid": "temp2",
+		"bp": [
+			{
+				"bpt_id": "1",
+				"amount": 1988
+			},
+			{
+				"bpt_id": "2",
+				"amount": 250
+			}
+		]
+	}
+]

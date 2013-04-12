@@ -20,6 +20,7 @@
 (require 'init-markdown)
 (require 'init-tex)
 (require 'init-c)  ;; after init-yas-ac
+(require 'init-php)
 (require 'init-vcs)
 (require 'init-keymap) ;; keyboard map
 (require 'init-postfix) ;; 放到大多数库的后面
@@ -74,3 +75,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+
+
+(add-to-list 'tramp-default-proxies-alist
+             '(nil "\\`user\\'" "/ssh:%h:"))
+(setq tramp-default-method "ssh")

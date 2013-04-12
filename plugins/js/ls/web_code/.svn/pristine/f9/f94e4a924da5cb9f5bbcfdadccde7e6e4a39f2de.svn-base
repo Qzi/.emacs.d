@@ -1,9 +1,0 @@
-{
-    "redis": {
-        "host":"127.0.0.1",
-        "port":"6501"
-    },
-	"check_heartbeat": 60,
-	"token_expire": 1200,
-  "port":52561
-}

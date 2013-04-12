@@ -4,11 +4,11 @@
 
 (if (eq window-system 'mac)
 ;; mac-keyboard
-(setq mac-command-modifier nil
+(setq mac-command-modifier 'meta
       mac-option-modifier 'meta
-      mac-allow-anti-aliasing t
-      mac-command-key-is-meta nil)
-)
+;;      mac-allow-anti-aliasing t
+;;      mac-command-key-is-meta t
+))
 
 
 ;; 行首, 设定mark以及行尾.
